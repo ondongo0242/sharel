@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const sakuraTheme: ThemeConfig = {
+  id: 'sakura',
+  name: 'Sakura',
+  isDark: false,
+  colors: {
+    text: "#4A0E31",
+    textSecondary: "#8D3D6B",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#D81B60",
+    tabIconSelected: "#AD1457",
+    link: "#C2185B",
+    primary: "#E91E63",
+    secondary: "#F06292",
+    accent: "#FF4081",
+    border: "#F8BBD9",
+    backgroundRoot: "#FFF0F5",
+    backgroundDefault: "#FFFFFF",
+    backgroundSecondary: "#FCE4EC",
+    backgroundTertiary: "#F8BBD9",
+    success: "#4CAF50",
+    error: "#D32F2F",
+    warning: "#FFA000",
+    purple: "#9C27B0",
+    pink: "#E91E63",
+    shadow: "#880E4F",
+  },
+  animatedBackground: {
+    type: 'particles',
+    colors: ['#F8BBD9', '#F48FB1', '#F06292'],
+    speed: 'slow',
+    opacity: 0.4,
+  },
+  previewGradient: ['#FFF0F5', '#FCE4EC', '#F8BBD9'],
+};

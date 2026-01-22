@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const lavenderTheme: ThemeConfig = {
+  id: 'lavender',
+  name: 'Lavender',
+  isDark: false,
+  colors: {
+    text: "#311B92",
+    textSecondary: "#5E35B1",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#7E57C2",
+    tabIconSelected: "#673AB7",
+    link: "#7C4DFF",
+    primary: "#673AB7",
+    secondary: "#7E57C2",
+    accent: "#B388FF",
+    border: "#D1C4E9",
+    backgroundRoot: "#F5F0FF",
+    backgroundDefault: "#FFFFFF",
+    backgroundSecondary: "#EDE7F6",
+    backgroundTertiary: "#D1C4E9",
+    success: "#4CAF50",
+    error: "#E53935",
+    warning: "#FF9800",
+    purple: "#9C27B0",
+    pink: "#E91E63",
+    shadow: "#4527A0",
+  },
+  animatedBackground: {
+    type: 'gradient',
+    colors: ['#EDE7F6', '#D1C4E9', '#B39DDB', '#EDE7F6'],
+    speed: 'slow',
+    opacity: 0.5,
+  },
+  previewGradient: ['#F5F0FF', '#EDE7F6', '#D1C4E9'],
+};

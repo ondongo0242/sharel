@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const midnightTheme: ThemeConfig = {
+  id: 'midnight',
+  name: 'Midnight',
+  isDark: true,
+  colors: {
+    text: "#ECEFF1",
+    textSecondary: "#90A4AE",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#607D8B",
+    tabIconSelected: "#455A64",
+    link: "#78909C",
+    primary: "#607D8B",
+    secondary: "#455A64",
+    accent: "#B0BEC5",
+    border: "#263238",
+    backgroundRoot: "#0A0E11",
+    backgroundDefault: "#121A1F",
+    backgroundSecondary: "#1A252C",
+    backgroundTertiary: "#233039",
+    success: "#26A69A",
+    error: "#EF5350",
+    warning: "#FFCA28",
+    purple: "#7E57C2",
+    pink: "#EC407A",
+    shadow: "#000000",
+  },
+  animatedBackground: {
+    type: 'bubbles',
+    colors: ['#455A64', '#607D8B', '#78909C'],
+    speed: 'slow',
+    opacity: 0.15,
+  },
+  previewGradient: ['#0A0E11', '#1A252C', '#37474F'],
+};

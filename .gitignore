@@ -1,0 +1,68 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# Development and large files
+/dev/
+*.zip
+*.log
+.cache/
+.pythonlibs/
+.local/
+.config/
+.npm/
+package-lock.json
+
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+/ios
+# /android - Keep android folder to preserve custom native modules
+
+# EAS Build credentials
+credentials.json
+android/keystores/
+
+# Development folder (excluded from git and builds)
+/dev/
+
+# Temporary and large files
+*.zip
+zi*
+download-server.*
+upload-*.js
+compress-apk.sh

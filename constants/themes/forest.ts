@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const forestTheme: ThemeConfig = {
+  id: 'forest',
+  name: 'Forest',
+  isDark: true,
+  colors: {
+    text: "#E8F5E9",
+    textSecondary: "#A5D6A7",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#81C784",
+    tabIconSelected: "#4CAF50",
+    link: "#4CAF50",
+    primary: "#4CAF50",
+    secondary: "#388E3C",
+    accent: "#8BC34A",
+    border: "#1B5E20",
+    backgroundRoot: "#0A1F0C",
+    backgroundDefault: "#142E16",
+    backgroundSecondary: "#1E3D21",
+    backgroundTertiary: "#284D2B",
+    success: "#66BB6A",
+    error: "#EF5350",
+    warning: "#FFC107",
+    purple: "#9575CD",
+    pink: "#F48FB1",
+    shadow: "#040D05",
+  },
+  animatedBackground: {
+    type: 'particles',
+    colors: ['#4CAF50', '#81C784', '#A5D6A7'],
+    speed: 'slow',
+    opacity: 0.2,
+  },
+  previewGradient: ['#0A1F0C', '#1B5E20', '#388E3C'],
+};

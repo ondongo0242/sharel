@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const darkTheme: ThemeConfig = {
+  id: 'dark',
+  name: 'Sombre',
+  isDark: true,
+  colors: {
+    text: "#F1F5F9",
+    textSecondary: "#94A3B8",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#64748B",
+    tabIconSelected: "#3B82F6",
+    link: "#3B82F6",
+    primary: "#3B82F6",
+    secondary: "#10B981",
+    accent: "#F97316",
+    border: "#334155",
+    backgroundRoot: "#0F172A",
+    backgroundDefault: "#1E293B",
+    backgroundSecondary: "#334155",
+    backgroundTertiary: "#475569",
+    success: "#10B981",
+    error: "#EF4444",
+    warning: "#F59E0B",
+    purple: "#A78BFA",
+    pink: "#F0ABFC",
+    shadow: "#000000",
+  },
+  animatedBackground: {
+    type: 'particles',
+    colors: ['#1E3A8A', '#3B82F6', '#60A5FA', '#93C5FD'],
+    speed: 'slow',
+    opacity: 0.2,
+  },
+  previewGradient: ['#0F172A', '#1E3A8A', '#3B82F6'],
+};

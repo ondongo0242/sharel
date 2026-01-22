@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const lightTheme: ThemeConfig = {
+  id: 'light',
+  name: 'Clair',
+  isDark: false,
+  colors: {
+    text: "#0F172A",
+    textSecondary: "#64748B",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#94A3B8",
+    tabIconSelected: "#2563EB",
+    link: "#2563EB",
+    primary: "#2563EB",
+    secondary: "#10B981",
+    accent: "#F97316",
+    border: "#E2E8F0",
+    backgroundRoot: "#F8FAFC",
+    backgroundDefault: "#FFFFFF",
+    backgroundSecondary: "#F1F5F9",
+    backgroundTertiary: "#E2E8F0",
+    success: "#10B981",
+    error: "#EF4444",
+    warning: "#F59E0B",
+    purple: "#8B5CF6",
+    pink: "#EC4899",
+    shadow: "#000000",
+  },
+  animatedBackground: {
+    type: 'gradient',
+    colors: ['#E0E7FF', '#DBEAFE', '#E0F2FE', '#ECFEFF'],
+    speed: 'slow',
+    opacity: 0.25,
+  },
+  previewGradient: ['#F8FAFC', '#E0E7FF', '#DBEAFE'],
+};

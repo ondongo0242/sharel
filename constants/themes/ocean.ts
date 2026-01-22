@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const oceanTheme: ThemeConfig = {
+  id: 'ocean',
+  name: 'Ocean',
+  isDark: true,
+  colors: {
+    text: "#E0F7FA",
+    textSecondary: "#80DEEA",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#4DD0E1",
+    tabIconSelected: "#00BCD4",
+    link: "#00BCD4",
+    primary: "#00BCD4",
+    secondary: "#0097A7",
+    accent: "#26C6DA",
+    border: "#006064",
+    backgroundRoot: "#002838",
+    backgroundDefault: "#003847",
+    backgroundSecondary: "#004D5E",
+    backgroundTertiary: "#006475",
+    success: "#4DB6AC",
+    error: "#EF5350",
+    warning: "#FFB74D",
+    purple: "#7E57C2",
+    pink: "#F48FB1",
+    shadow: "#001820",
+  },
+  animatedBackground: {
+    type: 'waves',
+    colors: ['#006064', '#00838F', '#0097A7', '#00ACC1'],
+    speed: 'slow',
+    opacity: 0.3,
+  },
+  previewGradient: ['#002838', '#006064', '#00838F'],
+};

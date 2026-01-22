@@ -1,0 +1,128 @@
+{
+  "expo": {
+    "name": "Sharel",
+    "slug": "sharel",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "sharel",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sharel.app",
+      "icon": "./assets/images/icon.png",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Sharel needs access to local network to discover and connect with nearby devices for file sharing.",
+        "NSBonjourServices": [
+          "_shareit._tcp"
+        ],
+        "NSPhotoLibraryUsageDescription": "Sharel needs access to your photo library to let you share photos and videos.",
+        "NSPhotoLibraryAddUsageDescription": "Sharel needs permission to save received photos and videos to your photo library.",
+        "NSBluetoothAlwaysUsageDescription": "Sharel uses Bluetooth to discover and connect with nearby devices for file sharing.",
+        "NSBluetoothPeripheralUsageDescription": "Sharel uses Bluetooth to discover and connect with nearby devices for file sharing."
+      }
+    },
+    "android": {
+      "package": "com.sharel.app",
+      "icon": "./assets/images/icon.png",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.MANAGE_EXTERNAL_STORAGE",
+        "android.permission.QUERY_ALL_PACKAGES",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "READ_MEDIA_IMAGES",
+        "READ_MEDIA_VIDEO",
+        "READ_MEDIA_AUDIO",
+        "READ_CONTACTS",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "BLUETOOTH",
+        "BLUETOOTH_ADMIN",
+        "BLUETOOTH_ADVERTISE",
+        "BLUETOOTH_CONNECT",
+        "BLUETOOTH_SCAN",
+        "NEARBY_WIFI_DEVICES",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_STATE",
+        "ACCESS_NETWORK_STATE",
+        "CHANGE_NETWORK_STATE",
+        "INTERNET",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.CHANGE_WIFI_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.BLUETOOTH_ADVERTISE",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.NEARBY_WIFI_DEVICES",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.ACCESS_MEDIA_LOCATION",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO"
+      ]
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withWifiDirect.js",
+      "./plugins/withHotspotNative.js",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 26,
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0",
+            "buildArchs": [
+              "arm64-v8a"
+            ],
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "extraProguardRules": "-keep class com.sharel.app.** { *; }\n-dontwarn com.sharel.app.**\n-keep class com.facebook.react.bridge.** { *; }\n-keep class com.facebook.react.modules.** { *; }\n-keep class coil3.** { *; }\n-dontwarn coil3.**\n-keep class okhttp3.** { *; }\n-dontwarn okhttp3.**\n-keep class okio.** { *; }\n-dontwarn okio.**\n-keep class kotlin.** { *; }\n-dontwarn kotlin.**\n-keep class io.wifi.p2p.** { *; }\n-dontwarn io.wifi.p2p.**",
+            "packagingOptions": {
+              "pickFirst": [
+                "**/libc++_shared.so"
+              ]
+            },
+            "enableMinifyInReleaseBuilds": true
+          },
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "reactCompiler": true,
+      "tsconfigPaths": true
+    },
+    "updates": {
+      "enabled": false,
+      "checkAutomatically": "NEVER",
+      "fallbackToCacheTimeout": 0,
+      "url": ""
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2a590644-1ab3-49b4-90bf-6cb69098b0b2"
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+[2025-12-28 16:24:59.671] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-28 16:24:59.673] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-28 16:24:59.674] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-28 16:25:03.011] [INFO] [WiFiDirect] Using native Kotlin WifiDirectModule
+[2025-12-28 16:26:59.380] [INFO] [System] Device info | {"brand":"Itel","modelName":"itel A663LC","osName":"Android","osVersion":"13","platformApiLevel":33,"totalMemory":"3862 MB","deviceType":1,"isDevice":true}
+[2025-12-28 16:26:59.384] [INFO] [App] SESSION STARTED [JO7JOWR1]
+[2025-12-28 16:26:59.384] [INFO] [Storage] Log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-28 16:26:59.521] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-28 16:26:59.522] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-28 16:26:59.528] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-28 16:26:59.536] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-28 16:26:59.538] [INFO] [Network] Initial network state | {"type":"none","connected":false,"internetReachable":false}
+[2025-12-28 16:26:59.540] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-28 16:26:59.542] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-28 16:26:59.544] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":true,"StorageModule":true,"LogModule":true,"FileExplorerModule":true,"MediaGalleryModule":true,"ContactsModule":true,"AppsModule":true}
+[2025-12-28 16:26:59.545] [INFO] [NativeModules] All modules loaded OK
+[2025-12-28 16:26:59.546] [INFO] [GestureService] Initializing gesture service
+[2025-12-28 16:26:59.549] [INFO] [ImageCache] Initializing image cache service
+[2025-12-28 16:26:59.563] [ERROR] [ImageCache] Failed to ensure directories -- TypeError: undefined is not a function | {"error":"undefined is not a function"}
+[2025-12-28 16:26:59.570] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-28 16:26:59.572] [INFO] [GestureService] Orientation listener started
+[2025-12-28 16:26:59.574] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-28 16:26:59.575] [INFO] [App] Gesture service initialized
+[2025-12-28 16:26:59.576] [INFO] [App] TGBox API config loaded
+[2025-12-28 16:26:59.581] [WARN] [App] TGBox initialization pending auth
+[2025-12-28 16:26:59.582] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"/data/data/com.sharel.app/cache/image_cache/","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-28 16:26:59.582] [INFO] [App] Image cache service initialized
+[2025-12-28 16:26:59.881] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 56s"}
+[2025-12-28 16:28:40.979] [INFO] [Lifecycle] App state: background | {"previousUptime":"3m 31s"}
+[2025-12-28 16:28:40.980] [INFO] [Lifecycle] App state: active | {"previousUptime":"3m 35s"}
+[2025-12-28 16:29:08.369] [INFO] [Lifecycle] App state: background | {"previousUptime":"4m 5s"}
+[2025-12-28 16:29:09.049] [INFO] [Lifecycle] App state: active | {"previousUptime":"4m 6s"}
+[2025-12-28 16:29:19.242] [INFO] [Connection] Starting advertising | {"deviceName":"Device","details":{"method":"wifidirect"}}
+[2025-12-28 16:29:19.243] [INFO] [WiFiDirect] Initializing Wi-Fi Direct...
+[2025-12-28 16:29:19.301] [INFO] [WiFiDirect] Permissions granted
+[2025-12-28 16:29:19.333] [INFO] [WiFiDirect] Native Kotlin Wi-Fi Direct initialized successfully
+[2025-12-28 16:29:19.345] [ERROR] [Connection] Failed to start advertising | {"error":{"error":{},"method":"wifidirect","deviceName":"Device"}}
+[2025-12-28 16:29:49.718] [INFO] [Connection] Starting advertising | {"deviceName":"Device","details":{"method":"wifidirect"}}
+[2025-12-28 16:29:49.735] [ERROR] [Connection] Failed to start advertising | {"error":{"error":{},"method":"wifidirect","deviceName":"Device"}}
+[2025-12-28 16:30:08.897] [INFO] [Lifecycle] App state: background | {"previousUptime":"5m 5s"}
+[2025-12-28 16:30:11.610] [INFO] [Lifecycle] App state: active | {"previousUptime":"5m 8s"}
+[2025-12-28 16:31:30.574] [INFO] [Lifecycle] App state: background | {"previousUptime":"6m 27s"}
+[2025-12-28 16:31:45.114] [INFO] [Lifecycle] App state: active | {"previousUptime":"6m 42s"}
+[2025-12-28 16:31:45.239] [INFO] [Lifecycle] App state: background | {"previousUptime":"6m 42s"}
+[2025-12-28 16:31:45.946] [INFO] [Lifecycle] App state: active | {"previousUptime":"6m 42s"}
+[2025-12-28 16:31:59.887] [INFO] [Lifecycle] App state: background | {"previousUptime":"6m 56s"}
+[2025-12-28 16:32:00.341] [INFO] [Lifecycle] App state: active | {"previousUptime":"6m 57s"}
+[2025-12-28 16:32:32.104] [INFO] [Lifecycle] App state: background | {"previousUptime":"7m 29s"}
+[2025-12-28 16:33:49.459] [INFO] [Lifecycle] App state: active | {"previousUptime":"8m 46s"}
+[2025-12-28 16:33:54.452] [INFO] [Lifecycle] App state: background | {"previousUptime":"8m 51s"}
+[2025-12-28 16:33:55.038] [INFO] [Lifecycle] App state: active | {"previousUptime":"8m 52s"}
+[2025-12-28 16:34:00.434] [INFO] [Lifecycle] App state: background | {"previousUptime":"8m 57s"}
+[2025-12-28 16:34:44.222] [INFO] [Network] Network changed | {"type":"wifi","isConnected":true,"isInternetReachable":false}
+[2025-12-28 16:36:12.509] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-28 16:36:14.846] [INFO] [Network] Network changed | {"type":"cellular","isConnected":true,"isInternetReachable":false}

@@ -1,0 +1,358 @@
+[2025-12-14 12:24:04.233] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-14 12:24:04.235] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-14 12:24:04.235] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-14 12:24:06.773] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-14 12:24:06.774] [INFO] [System] │ Brand: Itel
+[2025-12-14 12:24:06.774] [INFO] [System] │ Model: itel A663LC
+[2025-12-14 12:24:06.775] [INFO] [System] │ OS: Android 13
+[2025-12-14 12:24:06.775] [INFO] [System] │ API Level: 33
+[2025-12-14 12:24:06.775] [INFO] [System] │ Memory: 3862 MB
+[2025-12-14 12:24:06.776] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-14 12:24:06.776] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 12:24:06.776] [INFO] [App]   SHAREL SESSION STARTED [MITO67ZV]
+[2025-12-14 12:24:06.776] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 12:24:06.777] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-14 12:24:06.894] [INFO] [Network] Network changed | {"type":"wifi","isConnected":true,"isInternetReachable":true}
+[2025-12-14 12:24:06.895] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-14 12:24:06.899] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-14 12:24:06.905] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-14 12:24:06.906] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-14 12:24:06.907] [INFO] [Network] │ Type: wifi
+[2025-12-14 12:24:06.908] [INFO] [Network] │ Connected: Yes
+[2025-12-14 12:24:06.908] [INFO] [Network] │ Internet: Reachable
+[2025-12-14 12:24:06.910] [INFO] [Network] │ IP: 192.168.1.100
+[2025-12-14 12:24:06.911] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-14 12:24:06.912] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-14 12:24:06.913] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-14 12:24:06.914] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-14 12:24:06.919] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-14 12:24:06.919] [INFO] [GestureService] Initializing gesture service
+[2025-12-14 12:24:06.920] [INFO] [ImageCache] Initializing image cache service
+[2025-12-14 12:24:06.931] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-14 12:24:06.932] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-14 12:24:06.933] [INFO] [GestureService] Orientation listener started
+[2025-12-14 12:24:06.933] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-14 12:24:06.934] [INFO] [App] Gesture service initialized
+[2025-12-14 12:24:06.937] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-14 12:24:06.937] [INFO] [App] Image cache service initialized
+[2025-12-14 12:24:07.131] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-14 12:24:17.345] [INFO] [Lifecycle] App state: background | {"previousUptime":"10s"}
+[2025-12-14 12:24:18.555] [INFO] [Lifecycle] App state: active | {"previousUptime":"12s"}
+[2025-12-14 12:24:25.782] [INFO] [Lifecycle] App state: background | {"previousUptime":"19s"}
+[2025-12-14 12:24:57.115] [INFO] [Lifecycle] App state: active | {"previousUptime":"50s"}
+[2025-12-14 12:25:23.623] [INFO] [Hotspot] UI: Starting hotspot | {"deviceName":"4YBG","platform":"android","version":33}
+[2025-12-14 12:25:23.624] [INFO] [Hotspot] ========== START HOTSPOT ==========
+[2025-12-14 12:25:23.627] [INFO] [Hotspot] startHotspot called | {"deviceName":"4YBG","platform":"android","version":33}
+[2025-12-14 12:25:23.627] [INFO] [Hotspot] Checking permissions...
+[2025-12-14 12:25:23.875] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 17s"}
+[2025-12-14 12:25:24.685] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 18s"}
+[2025-12-14 12:25:24.688] [INFO] [Hotspot] Permissions check result | {"granted":true}
+[2025-12-14 12:25:24.688] [INFO] [Hotspot] Calling native startLocalHotspot...
+[2025-12-14 12:25:24.689] [INFO] [Hotspot] nativeHotspot available | {"available":true}
+[2025-12-14 12:25:25.343] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-14 12:25:27.462] [INFO] [Hotspot] Native hotspot started | {"ssid":"AndroidShare_6373","hasPassword":true,"ipAddress":"192.168.126.60","isActive":true}
+[2025-12-14 12:25:27.469] [INFO] [Hotspot] Starting HTTP server... | {"ssid":"AndroidShare_6373","port":8080}
+[2025-12-14 12:25:27.491] [INFO] [Hotspot] Hotspot fully started | {"ssid":"AndroidShare_6373","password":"7caq3h2nufj7rpc","ipAddress":"192.168.126.60","port":8080}
+[2025-12-14 12:25:27.493] [INFO] [Hotspot] UI: Hotspot started successfully | {"ssid":"AndroidShare_6373","password":"7caq3h2nufj7rpc","ipAddress":"192.168.126.60","port":8080}
+[2025-12-14 12:25:48.063] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 41s"}
+[2025-12-14 13:00:26.216] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-14 13:00:26.217] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-14 13:00:26.218] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-14 13:00:28.920] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-14 13:00:28.921] [INFO] [System] │ Brand: Itel
+[2025-12-14 13:00:28.921] [INFO] [System] │ Model: itel A663LC
+[2025-12-14 13:00:28.922] [INFO] [System] │ OS: Android 13
+[2025-12-14 13:00:28.922] [INFO] [System] │ API Level: 33
+[2025-12-14 13:00:28.927] [INFO] [System] │ Memory: 3862 MB
+[2025-12-14 13:00:28.927] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-14 13:00:28.928] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 13:00:28.928] [INFO] [App]   SHAREL SESSION STARTED [472SM8QA]
+[2025-12-14 13:00:28.929] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 13:00:28.929] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-14 13:00:29.083] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-14 13:00:29.083] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-14 13:00:29.088] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-14 13:00:29.100] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-14 13:00:29.101] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-14 13:00:29.102] [INFO] [Network] │ Type: none
+[2025-12-14 13:00:29.102] [INFO] [Network] │ Connected: No
+[2025-12-14 13:00:29.103] [INFO] [Network] │ Internet: Not reachable
+[2025-12-14 13:00:29.104] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-14 13:00:29.105] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-14 13:00:29.107] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-14 13:00:29.107] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-14 13:00:29.111] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-14 13:00:29.112] [INFO] [GestureService] Initializing gesture service
+[2025-12-14 13:00:29.113] [INFO] [ImageCache] Initializing image cache service
+[2025-12-14 13:00:29.125] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-14 13:00:29.126] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-14 13:00:29.128] [INFO] [GestureService] Orientation listener started
+[2025-12-14 13:00:29.128] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-14 13:00:29.129] [INFO] [App] Gesture service initialized
+[2025-12-14 13:00:29.130] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-14 13:00:29.131] [INFO] [App] Image cache service initialized
+[2025-12-14 13:00:29.302] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-14 13:01:18.846] [INFO] [Hotspot] UI: Starting hotspot | {"deviceName":"0XHT","platform":"android","version":33}
+[2025-12-14 13:01:18.848] [INFO] [Hotspot] ========== START HOTSPOT ==========
+[2025-12-14 13:01:18.849] [INFO] [Hotspot] startHotspot called | {"deviceName":"0XHT","platform":"android","version":33}
+[2025-12-14 13:01:18.851] [INFO] [Hotspot] Checking permissions...
+[2025-12-14 13:01:19.107] [INFO] [Lifecycle] App state: background | {"previousUptime":"50s"}
+[2025-12-14 13:01:19.906] [INFO] [Lifecycle] App state: active | {"previousUptime":"51s"}
+[2025-12-14 13:01:19.911] [INFO] [Hotspot] Permissions check result | {"granted":true}
+[2025-12-14 13:01:19.913] [INFO] [Hotspot] Calling native startLocalHotspot...
+[2025-12-14 13:01:19.914] [INFO] [Hotspot] nativeHotspot available | {"available":true}
+[2025-12-14 13:01:21.798] [INFO] [Hotspot] Native hotspot started | {"ssid":"AndroidShare_1802","hasPassword":true,"ipAddress":"192.168.126.60","isActive":true}
+[2025-12-14 13:01:21.799] [INFO] [Hotspot] Starting HTTP server... | {"ssid":"AndroidShare_1802","port":8080}
+[2025-12-14 13:01:21.821] [INFO] [Hotspot] Hotspot fully started | {"ssid":"AndroidShare_1802","password":"j447tbzpghfrh2m","ipAddress":"192.168.126.60","port":8080}
+[2025-12-14 13:01:21.822] [INFO] [Hotspot] UI: Hotspot started successfully | {"ssid":"AndroidShare_1802","password":"j447tbzpghfrh2m","ipAddress":"192.168.126.60","port":8080}
+[2025-12-14 13:01:57.594] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 29s"}
+[2025-12-14 17:02:57.299] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-14 17:02:57.300] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-14 17:02:57.301] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-14 17:03:00.198] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-14 17:03:00.199] [INFO] [System] │ Brand: Itel
+[2025-12-14 17:03:00.199] [INFO] [System] │ Model: itel A663LC
+[2025-12-14 17:03:00.199] [INFO] [System] │ OS: Android 13
+[2025-12-14 17:03:00.200] [INFO] [System] │ API Level: 33
+[2025-12-14 17:03:00.200] [INFO] [System] │ Memory: 3862 MB
+[2025-12-14 17:03:00.201] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-14 17:03:00.202] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 17:03:00.203] [INFO] [App]   SHAREL SESSION STARTED [S30E6KZJ]
+[2025-12-14 17:03:00.205] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 17:03:00.205] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-14 17:03:00.304] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-14 17:03:00.304] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-14 17:03:00.310] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-14 17:03:00.317] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-14 17:03:00.318] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-14 17:03:00.319] [INFO] [Network] │ Type: none
+[2025-12-14 17:03:00.320] [INFO] [Network] │ Connected: No
+[2025-12-14 17:03:00.321] [INFO] [Network] │ Internet: Not reachable
+[2025-12-14 17:03:00.323] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-14 17:03:00.324] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-14 17:03:00.324] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-14 17:03:00.325] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-14 17:03:00.330] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-14 17:03:00.330] [INFO] [GestureService] Initializing gesture service
+[2025-12-14 17:03:00.331] [INFO] [ImageCache] Initializing image cache service
+[2025-12-14 17:03:00.343] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-14 17:03:00.344] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-14 17:03:00.345] [INFO] [GestureService] Orientation listener started
+[2025-12-14 17:03:00.346] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-14 17:03:00.346] [INFO] [App] Gesture service initialized
+[2025-12-14 17:03:00.347] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-14 17:03:00.348] [INFO] [App] Image cache service initialized
+[2025-12-14 17:03:23.109] [INFO] [Lifecycle] App state: background | {"previousUptime":"23s"}
+[2025-12-14 17:03:23.752] [INFO] [Lifecycle] App state: active | {"previousUptime":"23s"}
+[2025-12-14 17:04:00.152] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 0s"}
+[2025-12-14 17:04:00.593] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 0s"}
+[2025-12-14 17:04:00.826] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 1s"}
+[2025-12-14 17:04:00.946] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 1s"}
+[2025-12-14 17:04:06.288] [INFO] [Connection] Connecting with payload | {"peerId":"android_1765728212896","deviceName":"itel A663LC","details":{"method":"wifidirect","peerName":"Appareil","deviceAddress":"android_1765728212896"}}
+[2025-12-14 17:04:06.290] [WARN] [WiFiDirect] Wi-Fi Direct not supported on this platform
+[2025-12-14 17:04:06.297] [ERROR] [Connection] Failed to connect with payload | {"error":{},"method":"wifidirect","peerId":"android_1765728212896","peerName":"Appareil"}
+[2025-12-14 17:04:55.616] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 55s"}
+[2025-12-14 17:04:55.979] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 56s"}
+[2025-12-14 17:05:14.059] [INFO] [Lifecycle] App state: background | {"previousUptime":"2m 14s"}
+[2025-12-14 23:24:47.949] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-14 23:24:47.950] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-14 23:24:47.951] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-14 23:24:50.476] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-14 23:24:50.477] [INFO] [System] │ Brand: Itel
+[2025-12-14 23:24:50.478] [INFO] [System] │ Model: itel A663LC
+[2025-12-14 23:24:50.478] [INFO] [System] │ OS: Android 13
+[2025-12-14 23:24:50.479] [INFO] [System] │ API Level: 33
+[2025-12-14 23:24:50.479] [INFO] [System] │ Memory: 3862 MB
+[2025-12-14 23:24:50.480] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-14 23:24:50.480] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 23:24:50.481] [INFO] [App]   SHAREL SESSION STARTED [H6XWK1HC]
+[2025-12-14 23:24:50.482] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 23:24:50.483] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-14 23:24:50.569] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-14 23:24:50.570] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-14 23:24:50.575] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-14 23:24:50.583] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-14 23:24:50.584] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-14 23:24:50.585] [INFO] [Network] │ Type: none
+[2025-12-14 23:24:50.586] [INFO] [Network] │ Connected: No
+[2025-12-14 23:24:50.587] [INFO] [Network] │ Internet: Not reachable
+[2025-12-14 23:24:50.587] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-14 23:24:50.588] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-14 23:24:50.589] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-14 23:24:50.590] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-14 23:24:50.595] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-14 23:24:50.595] [INFO] [GestureService] Initializing gesture service
+[2025-12-14 23:24:50.597] [INFO] [ImageCache] Initializing image cache service
+[2025-12-14 23:24:50.606] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-14 23:24:50.607] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-14 23:24:50.607] [INFO] [GestureService] Orientation listener started
+[2025-12-14 23:24:50.608] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-14 23:24:50.609] [INFO] [App] Gesture service initialized
+[2025-12-14 23:24:50.610] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-14 23:24:50.611] [INFO] [App] Image cache service initialized
+[2025-12-14 23:24:50.844] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-14 23:25:46.897] [INFO] [Lifecycle] App state: background | {"previousUptime":"56s"}
+[2025-12-14 23:25:54.766] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 4s"}
+[2025-12-14 23:26:24.536] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 34s"}
+[2025-12-14 23:26:25.190] [INFO] [Lifecycle] App state: active | {"previousUptime":"1m 35s"}
+[2025-12-14 23:26:29.238] [INFO] [Lifecycle] App state: background | {"previousUptime":"1m 39s"}
+[2025-12-15 14:48:03.616] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-15 14:48:03.618] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-15 14:48:03.618] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-15 14:48:06.154] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-15 14:48:06.154] [INFO] [System] │ Brand: Itel
+[2025-12-15 14:48:06.155] [INFO] [System] │ Model: itel A663LC
+[2025-12-15 14:48:06.155] [INFO] [System] │ OS: Android 13
+[2025-12-15 14:48:06.155] [INFO] [System] │ API Level: 33
+[2025-12-15 14:48:06.156] [INFO] [System] │ Memory: 3862 MB
+[2025-12-15 14:48:06.156] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-15 14:48:06.157] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-15 14:48:06.158] [INFO] [App]   SHAREL SESSION STARTED [ALY41L9Q]
+[2025-12-15 14:48:06.159] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-15 14:48:06.159] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-15 14:48:06.280] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-15 14:48:06.281] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-15 14:48:06.286] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-15 14:48:06.293] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-15 14:48:06.295] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-15 14:48:06.296] [INFO] [Network] │ Type: none
+[2025-12-15 14:48:06.297] [INFO] [Network] │ Connected: No
+[2025-12-15 14:48:06.298] [INFO] [Network] │ Internet: Not reachable
+[2025-12-15 14:48:06.299] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-15 14:48:06.300] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-15 14:48:06.301] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-15 14:48:06.301] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-15 14:48:06.306] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-15 14:48:06.306] [INFO] [GestureService] Initializing gesture service
+[2025-12-15 14:48:06.307] [INFO] [ImageCache] Initializing image cache service
+[2025-12-15 14:48:06.319] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-15 14:48:06.320] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-15 14:48:06.322] [INFO] [GestureService] Orientation listener started
+[2025-12-15 14:48:06.323] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-15 14:48:06.324] [INFO] [App] Gesture service initialized
+[2025-12-15 14:48:06.326] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-15 14:48:06.327] [INFO] [App] Image cache service initialized
+[2025-12-15 14:48:06.524] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-15 14:49:03.980] [INFO] [Lifecycle] App state: background | {"previousUptime":"58s"}
+[2025-12-15 18:28:37.859] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-15 18:28:37.860] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-15 18:28:37.860] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-15 18:28:40.343] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-15 18:28:40.346] [INFO] [System] │ Brand: Itel
+[2025-12-15 18:28:40.347] [INFO] [System] │ Model: itel A663LC
+[2025-12-15 18:28:40.347] [INFO] [System] │ OS: Android 13
+[2025-12-15 18:28:40.348] [INFO] [System] │ API Level: 33
+[2025-12-15 18:28:40.349] [INFO] [System] │ Memory: 3862 MB
+[2025-12-15 18:28:40.350] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-15 18:28:40.350] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-15 18:28:40.351] [INFO] [App]   SHAREL SESSION STARTED [NSNIQP5C]
+[2025-12-15 18:28:40.352] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-15 18:28:40.353] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-15 18:28:40.436] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-15 18:28:40.437] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-15 18:28:40.442] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-15 18:28:40.450] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-15 18:28:40.451] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-15 18:28:40.454] [INFO] [Network] │ Type: none
+[2025-12-15 18:28:40.455] [INFO] [Network] │ Connected: No
+[2025-12-15 18:28:40.457] [INFO] [Network] │ Internet: Not reachable
+[2025-12-15 18:28:40.458] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-15 18:28:40.459] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-15 18:28:40.461] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-15 18:28:40.462] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-15 18:28:40.468] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-15 18:28:40.469] [INFO] [GestureService] Initializing gesture service
+[2025-12-15 18:28:40.470] [INFO] [ImageCache] Initializing image cache service
+[2025-12-15 18:28:40.483] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-15 18:28:40.484] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-15 18:28:40.485] [INFO] [GestureService] Orientation listener started
+[2025-12-15 18:28:40.486] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-15 18:28:40.487] [INFO] [App] Gesture service initialized
+[2025-12-15 18:28:40.489] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-15 18:28:40.490] [INFO] [App] Image cache service initialized
+[2025-12-15 18:28:40.765] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-15 18:29:11.672] [INFO] [Lifecycle] App state: background | {"previousUptime":"31s"}
+[2025-12-15 18:29:17.187] [INFO] [Lifecycle] App state: active | {"previousUptime":"37s"}
+[2025-12-15 18:29:17.267] [INFO] [Lifecycle] App state: background | {"previousUptime":"37s"}
+[2025-12-15 18:29:19.286] [INFO] [Lifecycle] App state: active | {"previousUptime":"39s"}
+[2025-12-15 18:30:51.852] [INFO] [Lifecycle] App state: background | {"previousUptime":"2m 11s"}
+[2025-12-15 18:40:11.010] [INFO] [Lifecycle] App state: active | {"previousUptime":"11m 30s"}
+[2025-12-15 18:40:12.557] [INFO] [Lifecycle] App state: background | {"previousUptime":"11m 32s"}
+[2025-12-16 08:19:39.664] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-16 08:19:39.665] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-16 08:19:39.665] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-16 08:19:44.674] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-16 08:19:44.675] [INFO] [System] │ Brand: Itel
+[2025-12-16 08:19:44.675] [INFO] [System] │ Model: itel A663LC
+[2025-12-16 08:19:44.677] [INFO] [System] │ OS: Android 13
+[2025-12-16 08:19:44.679] [INFO] [System] │ API Level: 33
+[2025-12-16 08:19:44.681] [INFO] [System] │ Memory: 3862 MB
+[2025-12-16 08:19:44.681] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-16 08:19:44.682] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-16 08:19:44.682] [INFO] [App]   SHAREL SESSION STARTED [ADJS24KZ]
+[2025-12-16 08:19:44.685] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-16 08:19:44.686] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-16 08:19:44.949] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-16 08:19:44.954] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-16 08:19:44.961] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-16 08:19:44.989] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-16 08:19:44.994] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-16 08:19:45.002] [INFO] [Network] │ Type: none
+[2025-12-16 08:19:45.002] [INFO] [Network] │ Connected: No
+[2025-12-16 08:19:45.006] [INFO] [Network] │ Internet: Not reachable
+[2025-12-16 08:19:45.009] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-16 08:19:45.010] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-16 08:19:45.010] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-16 08:19:45.011] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-16 08:19:45.022] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-16 08:19:45.023] [INFO] [GestureService] Initializing gesture service
+[2025-12-16 08:19:45.023] [INFO] [ImageCache] Initializing image cache service
+[2025-12-16 08:19:45.064] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-16 08:19:45.065] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-16 08:19:45.067] [INFO] [GestureService] Orientation listener started
+[2025-12-16 08:19:45.069] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-16 08:19:45.070] [INFO] [App] Gesture service initialized
+[2025-12-16 08:19:45.077] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-16 08:19:45.078] [INFO] [App] Image cache service initialized
+[2025-12-16 08:19:45.370] [INFO] [Lifecycle] App state: active | {"previousUptime":"1s"}
+[2025-12-16 08:22:07.399] [DEBUG] [GestureService] Orientation changed | {"orientation":4}
+[2025-12-16 08:22:11.907] [INFO] [Lifecycle] App state: background | {"previousUptime":"2m 27s"}
+[2025-12-14 19:21:33.016] [INFO] [SharelLogger] === Sharel Logger Initialized ===
+[2025-12-14 19:21:33.017] [INFO] [SharelLogger] Log directory: /storage/emulated/0/Android/media/com.sharel.app/logs
+[2025-12-14 19:21:33.018] [INFO] [SharelLogger] Android SDK: 33, Device: ITEL itel A663LC
+[2025-12-14 19:21:35.427] [INFO] [System] ┌─ Device Information ─────────────────────────
+[2025-12-14 19:21:35.428] [INFO] [System] │ Brand: Itel
+[2025-12-14 19:21:35.429] [INFO] [System] │ Model: itel A663LC
+[2025-12-14 19:21:35.429] [INFO] [System] │ OS: Android 13
+[2025-12-14 19:21:35.429] [INFO] [System] │ API Level: 33
+[2025-12-14 19:21:35.430] [INFO] [System] │ Memory: 3862 MB
+[2025-12-14 19:21:35.430] [INFO] [System] └───────────────────────────────────────────────
+[2025-12-14 19:21:35.431] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 19:21:35.431] [INFO] [App]   SHAREL SESSION STARTED [BNW4R6GR]
+[2025-12-14 19:21:35.432] [INFO] [App] ══════════════════════════════════════════════════════
+[2025-12-14 19:21:35.433] [INFO] [Storage] Internal log path: /data/data/com.sharel.app/files/Sharel/logs/sharel_log.txt
+[2025-12-14 19:21:35.520] [INFO] [Network] Network changed | {"type":"none","isConnected":false,"isInternetReachable":false}
+[2025-12-14 19:21:35.521] [INFO] [Storage] Native directories initialized | {"success":true,"dataPath":"/storage/emulated/0/Android/data/com.sharel.app/files","mediaPath":"/storage/emulated/0/Android/media/com.sharel.app","cachePath":"/storage/emulated/0/Android/data/com.sharel.app/cache"}
+[2025-12-14 19:21:35.525] [INFO] [Permission] MANAGE_EXTERNAL_STORAGE status | {"granted":true}
+[2025-12-14 19:21:35.532] [INFO] [Storage] Sharel root folder | {"path":"/storage/emulated/0/Sharel","created":false,"alreadyExists":true}
+[2025-12-14 19:21:35.533] [INFO] [Network] ┌─ Network Status ────────────────────────────
+[2025-12-14 19:21:35.534] [INFO] [Network] │ Type: none
+[2025-12-14 19:21:35.534] [INFO] [Network] │ Connected: No
+[2025-12-14 19:21:35.535] [INFO] [Network] │ Internet: Not reachable
+[2025-12-14 19:21:35.536] [INFO] [Network] └───────────────────────────────────────────────
+[2025-12-14 19:21:35.536] [INFO] [App] ====== SHAREL APP STARTED ======
+[2025-12-14 19:21:35.538] [INFO] [App] Platform | {"os":"android","version":33}
+[2025-12-14 19:21:35.539] [INFO] [NativeModules] Module status check | {"HotspotModule":true,"HttpServerModule":true,"WifiDirectModule":false,"StorageModule":true,"LogModule":true,"FileExplorerModule":false,"MediaGalleryModule":false,"ContactsModule":false,"AppsModule":false}
+[2025-12-14 19:21:35.543] [ERROR] [NativeModules] MISSING MODULES - App needs rebuild | {"missing":["WifiDirectModule","FileExplorerModule","MediaGalleryModule","ContactsModule","AppsModule"]}
+[2025-12-14 19:21:35.544] [INFO] [GestureService] Initializing gesture service
+[2025-12-14 19:21:35.545] [INFO] [ImageCache] Initializing image cache service
+[2025-12-14 19:21:35.555] [DEBUG] [GestureService] Settings loaded | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium","disableShakeDuringTransfer":true,"doubleTapAction":"pause_resume_transfer","swipeLeftAction":"delete","swipeRightAction":"share","longPressAction":"multi_select","rotationLockEnabled":false}
+[2025-12-14 19:21:35.557] [WARN] [GestureService] Sensors module not available on this platform
+[2025-12-14 19:21:35.558] [INFO] [GestureService] Orientation listener started
+[2025-12-14 19:21:35.560] [INFO] [GestureService] Gesture service initialized | {"shakeEnabled":true,"shakeAction":"discover_devices","shakeSensitivity":"medium"}
+[2025-12-14 19:21:35.560] [INFO] [App] Gesture service initialized
+[2025-12-14 19:21:35.562] [INFO] [ImageCache] Image cache initialized | {"diskCachePath":"","totalCacheSize":"0 B","entriesCount":0}
+[2025-12-14 19:21:35.563] [INFO] [App] Image cache service initialized
+[2025-12-14 19:21:35.846] [INFO] [Lifecycle] App state: active | {"previousUptime":"0s"}
+[2025-12-14 19:23:03.082] [DEBUG] [UI] [GesturesSettings] Screen opened
+[2025-12-14 19:23:41.371] [INFO] [Lifecycle] App state: background | {"previousUptime":"2m 6s"}

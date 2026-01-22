@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const auroraTheme: ThemeConfig = {
+  id: 'aurora',
+  name: 'Aurora',
+  isDark: true,
+  colors: {
+    text: "#E8EAF6",
+    textSecondary: "#9FA8DA",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#7C4DFF",
+    tabIconSelected: "#651FFF",
+    link: "#7C4DFF",
+    primary: "#7C4DFF",
+    secondary: "#536DFE",
+    accent: "#00E5FF",
+    border: "#311B92",
+    backgroundRoot: "#0D0A1F",
+    backgroundDefault: "#1A1433",
+    backgroundSecondary: "#271E47",
+    backgroundTertiary: "#34285B",
+    success: "#00E676",
+    error: "#FF5252",
+    warning: "#FFD740",
+    purple: "#B388FF",
+    pink: "#FF80AB",
+    shadow: "#050310",
+  },
+  animatedBackground: {
+    type: 'aurora',
+    colors: ['#7C4DFF', '#536DFE', '#00E5FF', '#00E676'],
+    speed: 'medium',
+    opacity: 0.35,
+  },
+  previewGradient: ['#0D0A1F', '#311B92', '#7C4DFF'],
+};

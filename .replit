@@ -1,0 +1,101 @@
+entrypoint = "README.md"
+modules = ["nodejs-22", "python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["freetype", "imagemagick", "jdk", "lcms2", "libimagequant", "libjpeg", "libtiff", "libwebp", "libxcrypt", "oneDNN", "openjpeg", "re2", "tcl", "tk", "unzip", "zip", "zlib", "expect"]
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+
+[[ports]]
+localPort = 8081
+externalPort = 80
+
+[[ports]]
+localPort = 8082
+externalPort = 5173
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "EAS Init"
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eas init"
+
+[[workflows.workflow]]
+name = "EAS Update"
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eas update --auto"
+
+[[workflows.workflow]]
+name = "EAS Publish Preview iOS"
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eas build --platform ios --profile preview"
+
+[[workflows.workflow]]
+name = "EAS Publish Preview Android"
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npx eas build --platform android --profile preview"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 8081
+
+
+
+[agent]
+stack = "EXPO"
+
+[deployment]
+deploymentTarget = "static"
+publicDir = "static-build"
+build = ["node", "scripts/build.js"]
+
+# Expo manifest headers
+[[deployment.responseHeaders]]
+path = "/*"
+name = "expo-protocol-version"
+value = "1"
+
+[[deployment.responseHeaders]]
+path = "/*"
+name = "expo-sfv-version"
+value = "0"
+
+[userenv]
+
+[userenv.shared]
+EXPO_PUBLIC_TGBOX_API_TOKEN = "tgb_app_XFUyIOaGSBV7oDLUz1i6VGfEhMZRrM6RAR0W_006Njy"
+EXPO_PUBLIC_TGBOX_API_BASE_URL = "https://api.tgbox.io"
+
+[userenv.development]
+EXPO_NO_PROMPT = "1"

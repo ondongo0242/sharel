@@ -1,0 +1,93 @@
+# EAS Build Ignore File
+# Exclude files that should not be in the APK
+
+# ===========================================
+# NATIVE PROJECT FOLDERS - Use CNG/Prebuild
+# ===========================================
+/android
+/ios
+
+# ===========================================
+# BUILD OUTPUT - Not needed for EAS Build
+# ===========================================
+dist/
+compressed_apk/
+
+# ===========================================
+# ARCHIVES - Large unnecessary files
+# ===========================================
+*.zip
+source-code.zip
+
+# ===========================================
+# DEVELOPMENT ASSETS
+# ===========================================
+attached_assets/
+assets/mockup/
+
+# ===========================================
+# DEVELOPMENT FILES
+# ===========================================
+dev/
+SHAREL SOURCE/
+
+# ===========================================
+# PYTHON FILES - Not needed for mobile app
+# ===========================================
+*.py
+pyproject.toml
+uv.lock
+.pythonlibs
+.pythonlibs/
+**/.pythonlibs
+**/.pythonlibs/**
+
+# ===========================================
+# SHELL SCRIPTS - Local automation
+# ===========================================
+*.sh
+download-server.*
+upload-*.js
+
+# ===========================================
+# CREDENTIALS & SECRETS
+# ===========================================
+credentials.json
+
+# ===========================================
+# DOCUMENTATION - Not needed in build
+# ===========================================
+*.md
+replit.md
+design_guidelines.md
+SETTINGS_ARCHITECTURE.md
+
+# ===========================================
+# NODE MODULES - EAS installs fresh from package-lock.json
+# ===========================================
+node_modules/
+
+# ===========================================
+# IDE & CONFIG FILES
+# ===========================================
+.replit
+replit.nix
+.git
+.git/
+**/.git
+**/.git/**
+.gitignore
+
+# ===========================================
+# HIDDEN FOLDERS - Replit/Dev specific
+# ===========================================
+.cache
+.cache/
+.local
+.local/
+.config
+.config/
+.npm
+.npm/
+.expo
+.expo/

@@ -1,0 +1,46 @@
+Tu es un agent expert React Native + Expo + TypeScript avec accès complet aux fichiers du projet Replit. Ta mission est de créer une application de partage de fichiers Android ↔ Android nommée Sharel, **remplaçant l’actuelle méthode Nearby Connections** par **Wi-Fi Direct natif**, stable et sans limite de taille. Tu peux éditer directement tous les fichiers nécessaires dans le projet.
+
+Instructions précises :
+
+1. Technologie :
+   - React Native + Expo Dev Client + TypeScript
+   - Wi-Fi Direct (Wi-Fi P2P) natif Android via `react-native-wifi-p2p-reborn` ou équivalent
+   - Pas besoin de Nearby Connections
+   - Support Android ↔ Android uniquement
+
+2. Permissions Android :
+   - `ACCESS_FINE_LOCATION`
+   - `CHANGE_WIFI_STATE`
+   - `ACCESS_WIFI_STATE`
+   - `NEARBY_WIFI_DEVICES` (Android 13+)
+   - `INTERNET`
+   - `READ_EXTERNAL_STORAGE` et `WRITE_EXTERNAL_STORAGE`
+
+3. Fonctionnalités :
+   - Découverte automatique des appareils à proximité
+   - Connexion P2P automatique
+   - Envoi et réception de fichiers **de n’importe quelle taille**
+   - Progression du transfert affichée en temps réel
+   - Sauvegarde des fichiers reçus dans `FileSystem.documentDirectory`
+
+4. UI minimale :
+   - Boutons : Scan, Connecter, Envoyer fichier, Recevoir fichier
+   - Liste des appareils trouvés avec possibilité de se connecter
+   - Progress bar pour le transfert
+
+5. Modules :
+   - Installer et configurer `react-native-wifi-p2p-reborn`
+   - Configurer correctement le `AndroidManifest.xml` et les permissions
+
+6. Code :
+   - Générer hooks et composants React Native en TypeScript
+   - Créer toutes les fonctions JS/TS pour discovery, connexion, send/receive
+   - Tout le code natif Android nécessaire est intégré via le module, tu n’as pas besoin de coder Java/Kotlin manuellement
+   - L’agent peut éditer tous les fichiers du projet pour que ça fonctionne directement sur un vrai appareil Android
+
+7. Tests :
+   - L’app doit être prête à lancer sur Expo Dev Client / EAS Build
+   - Aucun blocage Android ou Expo
+   - Aucune limite de taille pour les fichiers
+
+Ta tâche : **coder complètement cette version de Sharel**, directement dans les fichiers du projet Replit, avec tout configuré pour fonctionner immédiatement sur Android ↔ Android via Wi-Fi Direct.

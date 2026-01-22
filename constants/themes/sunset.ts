@@ -1,0 +1,36 @@
+import { ThemeConfig } from './types';
+
+export const sunsetTheme: ThemeConfig = {
+  id: 'sunset',
+  name: 'Sunset',
+  isDark: true,
+  colors: {
+    text: "#FFF3E0",
+    textSecondary: "#FFCC80",
+    buttonText: "#FFFFFF",
+    tabIconDefault: "#FFB74D",
+    tabIconSelected: "#FF9800",
+    link: "#FF9800",
+    primary: "#FF9800",
+    secondary: "#F57C00",
+    accent: "#FF5722",
+    border: "#BF360C",
+    backgroundRoot: "#3E1607",
+    backgroundDefault: "#5D2410",
+    backgroundSecondary: "#7B3114",
+    backgroundTertiary: "#993D17",
+    success: "#66BB6A",
+    error: "#EF5350",
+    warning: "#FFD54F",
+    purple: "#AB47BC",
+    pink: "#EC407A",
+    shadow: "#1A0A04",
+  },
+  animatedBackground: {
+    type: 'gradient',
+    colors: ['#FF5722', '#FF9800', '#FFC107', '#FF5722'],
+    speed: 'slow',
+    opacity: 0.25,
+  },
+  previewGradient: ['#3E1607', '#BF360C', '#FF5722'],
+};

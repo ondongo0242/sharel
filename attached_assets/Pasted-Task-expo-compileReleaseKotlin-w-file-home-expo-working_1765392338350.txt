@@ -1,0 +1,91 @@
+Task :expo:compileReleaseKotlin
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ExpoModulesPackage.kt:34:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ExpoReactHostFactory.kt:8:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ExpoReactHostFactory.kt:80:22 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:24:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:58:33 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:105:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:105:38 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:113:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:114:21 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:168:36 'constructor(activity: Activity, reactNativeHost: ReactNativeHost?, appKey: String?, launchOptions: Bundle?, fabricEnabled: Boolean): ReactDelegate' is deprecated. Deprecated since 0.81.0, use one of the other constructors instead.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:279:77 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:282:22 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:286:54 'val reactInstanceManager: ReactInstanceManager' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:6:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:15:9 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapper.kt:47:60 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:7:8 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:16:23 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:89:16 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactNativeHostWrapperBase.kt:101:38 'class ReactNativeHost : Any' is deprecated. Deprecated in Java.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/fetch/ExpoFetchModule.kt:30:39 'constructor(reactContext: ReactContext): ForwardingCookieHandler' is deprecated. Use the default constructor.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:42:16 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/fetch/NativeResponse.kt:44:11 'fun deallocate(): Unit' is deprecated. Use sharedObjectDidRelease() instead.
+
+Task :expo-modules-core:lintVitalAnalyzeRelease
+Task :expo:compileReleaseJavaWithJavac
+Task :expo:mergeReleaseGeneratedProguardFiles
+Task :expo:exportReleaseConsumerProguardFiles
+Task :expo:bundleLibRuntimeToJarRelease
+Task :expo:bundleLibCompileToJarRelease
+Task :expo:processReleaseJavaRes
+Task :expo:createFullJarRelease
+Task :expo:generateReleaseLintModel
+Task :expo:extractReleaseAnnotations
+Task :expo:mergeReleaseConsumerProguardFiles
+Task :expo:mergeReleaseJavaResource
+Task :expo:syncReleaseLibJars
+Task :expo:bundleReleaseLocalLintAar
+Task :expo:generateReleaseLintVitalModel
+Task :app:buildCMakeRelWithDebInfo[arm64-v8a]
+Task :expo-dev-menu:lintVitalAnalyzeRelease
+Task :expo-dev-launcher:lintVitalAnalyzeRelease
+Task :react-native-gesture-handler:lintVitalAnalyzeRelease
+Task :expo:lintVitalAnalyzeRelease
+Task :app:compileReleaseKotlin FAILED
+e: file:///home/expo/workingdir/build/android/app/src/main/java/com/sharel/app/MainApplication.kt:3:23 Unresolved reference 'SharelPackage'.
+e: file:///home/expo/workingdir/build/android/app/src/main/java/com/sharel/app/MainApplication.kt:46:5 Unresolved reference 'LogModule'.
+Task :app:mergeReleaseNativeLibs
+[Incubating] Problems report is available at: file:///home/expo/workingdir/build/android/build/reports/problems/problems-report.html
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+976 actionable tasks: 976 executed
+FAILURE: Build failed with an exception.
+
+What went wrong:
+Execution failed for task ':app:compileReleaseKotlin'.
+A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+Compilation error. See log for more details
+
+Try:
+Run with --stacktrace option to get the stack trace.
+Run with --info or --debug option to get more log output.
+Run with --scan to get full insights.
+Get more help at https://help.gradle.org.
+BUILD FAILED in 4m 58s
+Error: Gradle build failed with unknown error. See logs for the "Run gradlew" phase for more information.
+Fail job
+
+6 minutes ago
+Je vois l'erreur de build Android. Le problème est que les fichiers Kotlin ont un mauvais package déclaré. Laissez-moi vérifier et corriger les fichiers.
+
+Opened android/app/src/main/java/com directory
+Je vois le problème. Les fichiers Kotlin sont dans com/shareit/app/ mais le package doit être com/sharel/app/. Je dois créer le nouveau répertoire et mettre à jour les fichiers.
+
+Je dois créer le répertoire com/sharel/app/ et mettre à jour tous les fichiers Kotlin avec le nouveau package. Laissez-moi d'abord lire les autres fichiers.
+
+Optimized Agent memory
+Je vais maintenant créer le nouveau répertoire et mettre à jour tous les fichiers Kotlin avec le bon package com.sharel.app.
+
+Agent encountered an error while running, we are investigating the issue.
+
+Couldn't make checkpoint
+just now
+An unexpected error occurred while creating this checkpoint. This is most likely an issue with Replit.
+Worked for 4 minutes
+Upgrade to Core
+
+Pourquoi il a commencé a recree les fichiers au lieux de juste change bon bref toi tu connais plus que moi fini le travail correctement pas de doublon.
+

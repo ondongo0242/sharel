@@ -1,0 +1,122 @@
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'Itel/A663LC-GL/itel-A663LC:13/TP1A.220624.014/GL-250702V1126:user/release-keys'
+Revision: '0'
+ABI: 'arm64'
+Timestamp: 2025-12-10 15:01:54.285490957+0100
+Process uptime: 3s
+Cmdline: com.shareit.app
+pid: 15692, tid: 15719, name: mqt_v_js  >>> com.shareit.app <<<
+uid: 10422
+signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+Abort message: 'terminating due to uncaught exception of type facebook::jni::JniException: com.facebook.react.common.JavascriptException: [runtime not ready]: Error: Incompatible React versions: The "react" and "react-native-renderer" packages must have the exact same version. Instead got:
+  - react:                  19.2.1
+  - react-native-renderer:  19.1.0
+Learn more: https://react.dev/warnings/version-mismatch, stack:
+anonymous@1:485988
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:478962
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:1319222
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:1317354
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:1316351
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:1309787
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:926205
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:814520
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58715
+metroRequire@1:58225
+anonymous@1:111795
+loadModuleImplementation@1:59192
+guardedLoadModule@1:58671
+metroRequire@1:58225
+global@1:57681
+	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(Unknown Source:75)
+	at com.facebook.react.runtime.ReactInstance$d.reportJsException(Unknown Source:21)
+	at com.facebook.jni.NativeRunnable.run(Native Method)
+	at android.os.Handler.handleCallback(Handler.java:942)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(Unknown Source:5)
+	at android.os.Looper.loopOnce(Looper.java:201)
+	at android.os.Looper.loop(Looper.java:288)
+	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$Companion.startNewBackgroundThread$lambda$1(Unknown Source:37)
+	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$Companion.a(Unknown Source:0)
+	at com.facebook.react.bridge.queue.c.run(Unknown Source:2)
+	at java.lang.Thread.run(Thread.java:1119)'
+    x0  0000000000000000  x1  0000000000003d67  x2  0000000000000006  x3  00000070b917ce10
+    x4  646277641f736766  x5  646277641f736766  x6  646277641f736766  x7  7f7f7f7f7f7f7f7f
+    x8  00000000000000f0  x9  000000716fcb1af0  x10 0000000000000001  x11 000000716fd25e70
+    x12 0000000000d00e24  x13 000000bad2f6da13  x14 00096954e5bbc166  x15 0000000026762762
+    x16 000000716fd95a40  x17 000000716fd6eb10  x18 0000007058bae000  x19 0000000000003d4c
+    x20 0000000000003d67  x21 00000000ffffffff  x22 00000070b917cf40  x23 00000070b917cf80
+    x24 00000070b917d030  x25 0000000000000025  x26 00000070d0975f0a  x27 00000070d0972d65
+    x28 00000070d096d461  x29 00000070b917ce90
+    lr  000000716fd16988  sp  00000070b917cdf0  pc  000000716fd169b4  pst 0000000000000000
+backtrace:
+      #00 pc 000000000008c9b4  /apex/com.android.runtime/lib64/bionic/libc.so (abort+164) (BuildId: 21cd09af0ad2ccf35d6b8ba2d064b3c4)
+      #01 pc 00000000000a0210  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libc++_shared.so (BuildId: 6783a7f3a0d9c67c55a74cadc441ed55aaa493da)
+      #02 pc 000000000009eeb0  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libc++_shared.so (BuildId: 6783a7f3a0d9c67c55a74cadc441ed55aaa493da)
+      #03 pc 000000000009f374  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libc++_shared.so (BuildId: 6783a7f3a0d9c67c55a74cadc441ed55aaa493da)
+      #04 pc 000000000009f314  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libc++_shared.so (std::terminate()+56) (BuildId: 6783a7f3a0d9c67c55a74cadc441ed55aaa493da)
+      #05 pc 000000000025d584  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #06 pc 0000000000489594  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #07 pc 00000000002b90c4  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::JsErrorHandler::handleErrorWithCppPipeline(facebook::jsi::Runtime&, facebook::jsi::JSError&, bool, bool)+7440) (BuildId: daceecb3f8ffe4c2)
+      #08 pc 00000000002b7068  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::JsErrorHandler::handleError(facebook::jsi::Runtime&, facebook::jsi::JSError&, bool, bool)+1680) (BuildId: daceecb3f8ffe4c2)
+      #09 pc 000000000026c630  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #10 pc 00000000000aaa24  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #11 pc 00000000000aa760  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #12 pc 00000000000b2cd8  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #13 pc 00000000000c50c8  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #14 pc 00000000000c4a28  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #15 pc 00000000000f4554  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #16 pc 00000000000a0260  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #17 pc 00000000000a5e40  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #18 pc 00000000000a0060  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libhermes.so (BuildId: 3742cb807f54bf165f89bd93a20345afc069184d)
+      #19 pc 0000000000268024  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #20 pc 000000000041d4c0  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::Task::execute(facebook::jsi::Runtime&, bool)+312) (BuildId: daceecb3f8ffe4c2)
+      #21 pc 000000000041b654  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::RuntimeScheduler_Modern::executeTask(facebook::jsi::Runtime&, facebook::react::Task&, bool) const+60) (BuildId: daceecb3f8ffe4c2)
+      #22 pc 000000000041bf64  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::RuntimeScheduler_Modern::runEventLoopTick(facebook::jsi::Runtime&, facebook::react::Task&)+124) (BuildId: daceecb3f8ffe4c2)
+      #23 pc 000000000041bc74  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (facebook::react::RuntimeScheduler_Modern::runEventLoop(facebook::jsi::Runtime&)+88) (BuildId: daceecb3f8ffe4c2)
+      #24 pc 0000000000265d80  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #25 pc 000000000045e930  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libreactnative.so (BuildId: daceecb3f8ffe4c2)
+      #26 pc 0000000000017dd0  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libfbjni.so (facebook::jni::detail::MethodWrapper<void (facebook::jni::JNativeRunnable::*)(), &(facebook::jni::JNativeRunnable::run()), facebook::jni::JNativeRunnable, void>::dispatch(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>)+72) (BuildId: e438f6554af1d86b210a05412e96c4251e570157)
+      #27 pc 0000000000017d10  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/base.apk!libfbjni.so (facebook::jni::detail::FunctionWrapper<void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>), facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*, void>::call(_JNIEnv*, _jobject*, void (*)(facebook::jni::alias_ref<facebook::jni::detail::JTypeFor<facebook::jni::HybridClass<facebook::jni::JNativeRunnable, facebook::jni::JRunnable>::JavaPart, facebook::jni::JRunnable, void>::_javaobject*>))+60) (BuildId: e438f6554af1d86b210a05412e96c4251e570157)
+      #28 pc 0000000000d59340  /data/misc/apexdata/com.android.art/dalvik-cache/arm64/boot.oat (art_jni_trampoline+112)
+      #29 pc 00000000008d4dc4  /data/misc/apexdata/com.android.art/dalvik-cache/arm64/boot.oat (android.os.Handler.dispatchMessage+68)
+      #30 pc 000000000068a320  /apex/com.android.art/lib64/libart.so (nterp_helper+4016) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #31 pc 00000000003e935a  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/oat/arm64/base.vdex (com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage+10)
+      #32 pc 00000000008d82a8  /data/misc/apexdata/com.android.art/dalvik-cache/arm64/boot.oat (android.os.Looper.loopOnce+1048)
+      #33 pc 00000000008d7df4  /data/misc/apexdata/com.android.art/dalvik-cache/arm64/boot.oat (android.os.Looper.loop+916)
+      #34 pc 0000000000689408  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #35 pc 00000000003e96ce  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/oat/arm64/base.vdex (com.facebook.react.bridge.queue.MessageQueueThreadImpl$Companion.startNewBackgroundThread$lambda$1+74)
+      #36 pc 0000000000689408  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #37 pc 00000000003e9604  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/oat/arm64/base.vdex (com.facebook.react.bridge.queue.MessageQueueThreadImpl$Companion.a+0)
+      #38 pc 0000000000689408  /apex/com.android.art/lib64/libart.so (nterp_helper+152) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #39 pc 00000000003e9428  /data/app/~~Ve-rkVbQHi0jTkcO4ZbQGw==/com.shareit.app-YzbWUyIQMNnCqzz5HNWqcw==/oat/arm64/base.vdex (com.facebook.react.bridge.queue.c.run+4)
+      #40 pc 00000000003114f0  /data/misc/apexdata/com.android.art/dalvik-cache/arm64/boot.oat (java.lang.Thread.run+64)
+      #41 pc 0000000000317194  /apex/com.android.art/lib64/libart.so (art_quick_invoke_stub+612) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #42 pc 0000000000302838  /apex/com.android.art/lib64/libart.so (art::ArtMethod::Invoke(art::Thread*, unsigned int*, unsigned int, art::JValue*, char const*)+216) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #43 pc 00000000004c8298  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallback(void*)+932) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #44 pc 00000000004c7ee4  /apex/com.android.art/lib64/libart.so (art::Thread::CreateCallbackWithUffdGc(void*)+8) (BuildId: eb4ec0f1d1c7267591d83fa87cb36390)
+      #45 pc 00000000000faecc  /apex/com.android.runtime/lib64/bionic/libc.so (__pthread_start(void*)+204) (BuildId: 21cd09af0ad2ccf35d6b8ba2d064b3c4)
+      #46 pc 000000000008e1f0  /apex/com.android.runtime/lib64/bionic/libc.so (__start_thread+64) (BuildId: 21cd09af0ad2ccf35d6b8ba2d064b3c4)
+available space is less than: 50, free_size: 886308864, f_bavail: 216384 , f_blocks: 13681920
+available space is less than: 10, free_size: 886304768, f_bavail: 216383 , f_blocks: 13681920
