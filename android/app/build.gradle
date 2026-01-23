@@ -127,8 +127,27 @@ android {
             pickFirsts += ['**/libc++_shared.so']
         }
     }
-    androidResources {
-        ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~'
+    
+    dependencies {
+        implementation "org.nanohttpd:nanohttpd:2.3.1"
+        implementation "com.facebook.react:react-android"
+        
+        if (project.findProperty('expo.gif.enabled') == "true") {
+            implementation "com.facebook.fresco:animated-gif:+"
+        }
+        
+        if (project.findProperty('expo.webp.enabled') == "true") {
+            implementation "com.facebook.fresco:webpsupport:+"
+            if (project.findProperty('expo.webp.animated') == "true") {
+                implementation "com.facebook.fresco:animated-webp:+"
+            }
+        }
+        
+        if (project.hasProperty('hermesEnabled') && project.hermesEnabled.toBoolean()) {
+            implementation "com.facebook.react:hermes-android"
+        } else {
+            implementation jscFlavor
+        }
     }
 }
 
@@ -150,27 +169,5 @@ android {
                 android.packagingOptions[prop] += option
             }
         }
-    }
-}
-
-dependencies {
-    implementation "org.nanohttpd:nanohttpd:2.3.1"
-    implementation "com.facebook.react:react-android"
-    
-    if (project.findProperty('expo.gif.enabled') == "true") {
-        implementation "com.facebook.fresco:animated-gif:+"
-    }
-    
-    if (project.findProperty('expo.webp.enabled') == "true") {
-        implementation "com.facebook.fresco:webpsupport:+"
-        if (project.findProperty('expo.webp.animated') == "true") {
-            implementation "com.facebook.fresco:animated-webp:+"
-        }
-    }
-    
-    if (project.hasProperty('hermesEnabled') && project.hermesEnabled.toBoolean()) {
-        implementation "com.facebook.react:hermes-android"
-    } else {
-        implementation jscFlavor
     }
 }
