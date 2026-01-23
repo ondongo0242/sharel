@@ -1,0 +1,126 @@
+2026-01-23T18:07:19.3787920Z ##[group]Run ./gradlew assembleRelease --no-daemon
+2026-01-23T18:07:19.3788287Z [36;1m./gradlew assembleRelease --no-daemon[0m
+2026-01-23T18:07:19.3807093Z shell: /usr/bin/bash -e {0}
+2026-01-23T18:07:19.3807322Z env:
+2026-01-23T18:07:19.3807556Z   GRADLE_USER_HOME: /home/runner/work/sharel/sharel/.gradle
+2026-01-23T18:07:19.3807954Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
+2026-01-23T18:07:19.3808394Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.17-10/x64
+2026-01-23T18:07:19.3808755Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-01-23T18:07:19.3809015Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-01-23T18:07:19.3809281Z ##[endgroup]
+2026-01-23T18:07:19.4661178Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+2026-01-23T18:07:20.8743123Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-01-23T18:07:22.0836979Z 
+2026-01-23T18:07:22.0838742Z Welcome to Gradle 8.14.3!
+2026-01-23T18:07:22.0845525Z 
+2026-01-23T18:07:22.0846004Z Here are the highlights of this release:
+2026-01-23T18:07:22.0846545Z  - Java 24 support
+2026-01-23T18:07:22.0847006Z  - GraalVM Native Image toolchain selection
+2026-01-23T18:07:22.0847567Z  - Enhancements to test reporting
+2026-01-23T18:07:22.0848050Z  - Build Authoring improvements
+2026-01-23T18:07:22.0848325Z 
+2026-01-23T18:07:22.0848858Z For more details see https://docs.gradle.org/8.14.3/release-notes.html
+2026-01-23T18:07:22.0849142Z 
+2026-01-23T18:07:22.1833929Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-01-23T18:07:23.2839938Z Daemon will be stopped at the end of the build 
+2026-01-23T18:08:02.6830097Z 
+2026-01-23T18:08:02.6848072Z > Configure project :expo-gradle-plugin:expo-autolinking-plugin
+2026-01-23T18:08:02.6869494Z w: file:///home/runner/work/sharel/sharel/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-autolinking-plugin/build.gradle.kts:25:3: 'kotlinOptions(KotlinJvmOptionsDeprecated /* = KotlinJvmOptions */.() -> Unit): Unit' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+2026-01-23T18:08:04.5832020Z 
+2026-01-23T18:08:04.5833177Z > Configure project :expo-gradle-plugin:expo-autolinking-settings-plugin
+2026-01-23T18:08:04.5836969Z w: file:///home/runner/work/sharel/sharel/node_modules/expo-modules-autolinking/android/expo-gradle-plugin/expo-autolinking-settings-plugin/build.gradle.kts:30:3: 'kotlinOptions(KotlinJvmOptionsDeprecated /* = KotlinJvmOptions */.() -> Unit): Unit' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+2026-01-23T18:08:08.8829985Z 
+2026-01-23T18:08:08.8834179Z > Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:08:08.8835692Z > Task :gradle-plugin:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:08:08.8844222Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:08:08.8846090Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:08:08.8847369Z > Task :gradle-plugin:settings-plugin:pluginDescriptors
+2026-01-23T18:08:08.8864742Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:pluginDescriptors
+2026-01-23T18:08:08.9830616Z > Task :gradle-plugin:settings-plugin:processResources
+2026-01-23T18:08:08.9835773Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:processResources
+2026-01-23T18:08:14.1856830Z > Task :gradle-plugin:shared:processResources NO-SOURCE
+2026-01-23T18:08:14.2830962Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:processResources NO-SOURCE
+2026-01-23T18:08:21.0829865Z > Task :gradle-plugin:shared:compileKotlin
+2026-01-23T18:08:21.0832122Z > Task :gradle-plugin:shared:compileJava NO-SOURCE
+2026-01-23T18:08:21.0833086Z > Task :gradle-plugin:shared:classes UP-TO-DATE
+2026-01-23T18:08:21.1834915Z > Task :gradle-plugin:shared:jar
+2026-01-23T18:08:21.1835946Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileKotlin
+2026-01-23T18:08:21.1837373Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:compileJava NO-SOURCE
+2026-01-23T18:08:21.1838584Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:classes UP-TO-DATE
+2026-01-23T18:08:21.1839692Z > Task :expo-gradle-plugin:expo-autolinking-plugin-shared:jar
+2026-01-23T18:08:35.0831946Z > Task :gradle-plugin:settings-plugin:compileKotlin
+2026-01-23T18:08:35.0835736Z > Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
+2026-01-23T18:08:35.0836923Z > Task :gradle-plugin:settings-plugin:classes
+2026-01-23T18:08:35.0837804Z > Task :gradle-plugin:settings-plugin:jar
+2026-01-23T18:08:35.9831002Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileKotlin
+2026-01-23T18:08:35.9833265Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:compileJava NO-SOURCE
+2026-01-23T18:08:35.9835741Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:classes
+2026-01-23T18:08:35.9836894Z > Task :expo-gradle-plugin:expo-autolinking-settings-plugin:jar
+2026-01-23T18:08:44.1844842Z 
+2026-01-23T18:08:44.1853722Z > Configure project :expo-module-gradle-plugin
+2026-01-23T18:08:44.1856683Z w: file:///home/runner/work/sharel/sharel/node_modules/expo-modules-core/expo-module-gradle-plugin/build.gradle.kts:58:3: 'kotlinOptions(KotlinJvmOptionsDeprecated /* = KotlinJvmOptions */.() -> Unit): Unit' is deprecated. Please migrate to the compilerOptions DSL. More details are here: https://kotl.in/u1r8ln
+2026-01-23T18:09:17.6843184Z 
+2026-01-23T18:09:17.6851461Z > Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:09:17.6853418Z > Task :expo-gradle-plugin:expo-autolinking-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:09:17.7856436Z > Task :expo-module-gradle-plugin:checkKotlinGradlePluginConfigurationErrors SKIPPED
+2026-01-23T18:09:17.7858029Z > Task :expo-module-gradle-plugin:pluginDescriptors
+2026-01-23T18:09:17.7860234Z > Task :expo-module-gradle-plugin:processResources
+2026-01-23T18:09:18.6830671Z > Task :expo-gradle-plugin:expo-autolinking-plugin:pluginDescriptors
+2026-01-23T18:09:18.6834440Z > Task :expo-gradle-plugin:expo-autolinking-plugin:processResources
+2026-01-23T18:09:19.6884291Z > Task :expo-gradle-plugin:expo-autolinking-plugin:compileKotlin
+2026-01-23T18:09:19.6885940Z > Task :expo-gradle-plugin:expo-autolinking-plugin:compileJava NO-SOURCE
+2026-01-23T18:09:19.6887664Z > Task :expo-gradle-plugin:expo-autolinking-plugin:classes
+2026-01-23T18:09:19.7856091Z > Task :expo-gradle-plugin:expo-autolinking-plugin:jar
+2026-01-23T18:09:21.4830252Z > Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors
+2026-01-23T18:09:21.4831814Z > Task :gradle-plugin:react-native-gradle-plugin:processResources
+2026-01-23T18:09:25.9839437Z > Task :gradle-plugin:react-native-gradle-plugin:compileKotlin
+2026-01-23T18:09:25.9842890Z > Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
+2026-01-23T18:09:25.9844900Z > Task :gradle-plugin:react-native-gradle-plugin:classes
+2026-01-23T18:09:26.0841970Z > Task :gradle-plugin:react-native-gradle-plugin:jar
+2026-01-23T18:09:27.5831049Z 
+2026-01-23T18:09:27.5835591Z > Task :expo-module-gradle-plugin:compileKotlin
+2026-01-23T18:09:27.5837864Z w: file:///home/runner/work/sharel/sharel/node_modules/expo-modules-core/expo-module-gradle-plugin/src/main/kotlin/expo/modules/plugin/android/AndroidLibraryExtension.kt:9:24 'var targetSdk: Int?' is deprecated. Will be removed from library DSL in v9.0. Use testOptions.targetSdk or/and lint.targetSdk instead.
+2026-01-23T18:09:27.5838935Z 
+2026-01-23T18:09:27.5839192Z > Task :expo-module-gradle-plugin:compileJava NO-SOURCE
+2026-01-23T18:09:27.5839845Z > Task :expo-module-gradle-plugin:classes
+2026-01-23T18:09:27.5840213Z > Task :expo-module-gradle-plugin:jar
+2026-01-23T18:09:38.9853159Z 
+2026-01-23T18:09:38.9853999Z > Configure project :
+2026-01-23T18:09:38.9855181Z [32m[ExpoRootProject][0m Using the following versions:
+2026-01-23T18:09:38.9856097Z   - buildTools:  [32m35.0.0[0m
+2026-01-23T18:09:38.9856764Z   - minSdk:      [32m26[0m
+2026-01-23T18:09:38.9857385Z   - compileSdk:  [32m35[0m
+2026-01-23T18:09:38.9857997Z   - targetSdk:   [32m35[0m
+2026-01-23T18:09:38.9858689Z   - ndk:         [32m27.1.12297006[0m
+2026-01-23T18:09:38.9859397Z   - kotlin:      [32m2.1.20[0m
+2026-01-23T18:09:38.9860084Z   - ksp:         [32m2.1.20-2.0.1[0m
+2026-01-23T18:09:41.5832811Z 
+2026-01-23T18:09:41.5840128Z > Configure project :app
+2026-01-23T18:09:41.5848177Z android.packagingOptions.pickFirsts += [**/libc++_shared.so] (1)
+2026-01-23T18:09:41.6828732Z 
+2026-01-23T18:09:41.6840217Z [Incubating] Problems report is available at: file:///home/runner/work/sharel/sharel/android/build/reports/problems/problems-report.html
+2026-01-23T18:09:41.6845738Z 
+2026-01-23T18:09:41.6848427Z FAILURE: Build failed with an exception.
+2026-01-23T18:09:41.6855225Z 
+2026-01-23T18:09:41.6856648Z * Where:
+2026-01-23T18:09:41.6858362Z Build file '/home/runner/work/sharel/sharel/android/app/build.gradle' line: 156
+2026-01-23T18:09:41.6869268Z 
+2026-01-23T18:09:41.6869325Z 
+2026-01-23T18:09:41.6870874Z * What went wrong:
+2026-01-23T18:09:41.6871727Z A problem occurred evaluating project ':app'.
+2026-01-23T18:09:41.6874549Z > Could not find method $() for arguments [build_9ouort9cur2a3z4rukugrofmg$_run_closure4$_closure15@5bfe671e] on object of type org.gradle.api.internal.artifacts.dsl.dependencies.DefaultDependencyHandler.
+2026-01-23T18:09:41.6877073Z 
+2026-01-23T18:09:41.6877424Z * Try:
+2026-01-23T18:09:41.6878233Z > Run with --stacktrace option to get the stack trace.
+2026-01-23T18:09:41.6879745Z > Run with --info or --debug option to get more log output.
+2026-01-23T18:09:41.6886434Z > Run with --scan to get full insights.
+2026-01-23T18:09:41.6887629Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-01-23T18:09:41.6891276Z > Get more help at https://help.gradle.org.
+2026-01-23T18:09:41.6891650Z 
+2026-01-23T18:09:41.6891887Z BUILD FAILED in 2m 22s
+2026-01-23T18:09:41.6892122Z 
+2026-01-23T18:09:41.6893546Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-01-23T18:09:41.6894466Z 
+2026-01-23T18:09:41.6895980Z For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-01-23T18:09:41.6897666Z 24 actionable tasks: 24 executed
+2026-01-23T18:09:42.1107647Z ##[error]Process completed with exit code 1.

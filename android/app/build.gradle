@@ -153,7 +153,7 @@ android {
 
 dependencies {
     implementation "org.nanohttpd:nanohttpd:2.3.1"
-    implementation("com.facebook.react:react-android")
+    implementation "com.facebook.react:react-android"
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true"
     def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true"
@@ -161,20 +161,20 @@ dependencies {
 
     if (isGifEnabled) {
         // For animated gif support
-        implementation("com.facebook.fresco:animated-gif:+")
+        implementation "com.facebook.fresco:animated-gif:+"
     }
 
     if (isWebpEnabled) {
         // For webp support
-        implementation("com.facebook.fresco:webpsupport:+")
+        implementation "com.facebook.fresco:webpsupport:+"
         if (isWebpAnimatedEnabled) {
             // Animated webp support
-            implementation("com.facebook.fresco:animated-webp:+")
+            implementation "com.facebook.fresco:animated-webp:+"
         }
     }
 
     if (hermesEnabled.toBoolean()) {
-        implementation("com.facebook.react:hermes-android")
+        implementation "com.facebook.react:hermes-android"
     } else {
         implementation jscFlavor
     }
