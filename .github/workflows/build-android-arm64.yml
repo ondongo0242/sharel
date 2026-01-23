@@ -36,7 +36,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Expo prebuild (android)
         run: npx expo prebuild --clean --platform android
@@ -44,16 +44,18 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
+          cmdline-tools-version: '9477386'
+          accept-android-sdk-licenses: true
           packages: |
             platforms;android-33
             build-tools;35.0.0
             ndk;27.1.12297006
             cmake;3.22.1
-          accept-android-sdk-licenses: true
+            platform-tools
 
       - name: Build Android AAB (release)
         working-directory: android
-        run: ./gradlew assembleRelease --no-daemon -Porg.gradle.jvmargs="-Xmx2g"
+        run: ./gradlew assembleRelease --no-daemon
 
       - name: Download bundletool
         run: |
@@ -61,13 +63,13 @@ jobs:
 
       - name: Create arm64 device spec
         run: |
-          cat > device-arm64.json <<'EOF'
+          cat > device-arm64.json <<'JSON'
           {
             "supportedAbis": ["arm64-v8a"],
             "sdkVersion": 33,
             "screenDensity": 420
           }
-          EOF
+          JSON
 
       - name: Build APKS (arm64)
         run: |
@@ -79,13 +81,8 @@ jobs:
 
       - name: Extract APK
         run: |
-          mkdir -p apks_out
           unzip -o app-arm64.apks -d apks_out
           APK=$(find apks_out -name "*.apk" | head -n 1)
-          if [ -z "$APK" ]; then
-            echo "Error: No APK found"
-            exit 1
-          fi
           echo "APK_FILE=$APK" >> $GITHUB_ENV
           cp "$APK" unsigned.apk
 
@@ -94,4 +91,3 @@ jobs:
         with:
           name: sharel-arm64-unsigned-apk
           path: unsigned.apk
-          retention-days: 30
