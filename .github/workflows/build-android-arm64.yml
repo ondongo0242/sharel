@@ -46,12 +46,12 @@ jobs:
         with:
           cmdline-tools-version: '9477386'
           accept-android-sdk-licenses: true
-          packages: |
-            platforms;android-33
-            build-tools;35.0.0
-            ndk;27.1.12297006
-            cmake;3.22.1
-            platform-tools
+          packages:
+            - platforms;android-33
+            - build-tools;35.0.0
+            - ndk;27.1.12297006
+            - cmake;3.22.1
+            - platform-tools
 
       - name: Build Android AAB (release)
         working-directory: android

@@ -9,7 +9,6 @@
 .local/
 .config/
 .npm/
-package-lock.json
 
 # Dependencies
 node_modules/
