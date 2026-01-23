@@ -123,8 +123,7 @@ android {
     }
     packagingOptions {
         jniLibs {
-            def enableLegacyPackaging = findProperty('expo.useLegacyPackaging') ?: 'false'
-            useLegacyPackaging enableLegacyPackaging.toBoolean()
+            useLegacyPackaging = (findProperty('expo.useLegacyPackaging') ?: 'false').toBoolean()
             pickFirsts += ['**/libc++_shared.so']
         }
     }
@@ -161,17 +160,13 @@ dependencies {
     implementation "org.nanohttpd:nanohttpd:2.3.1"
     implementation "com.facebook.react:react-android"
     
-    def gifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true"
-    def webpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true"
-    def webpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true"
-    
-    if (gifEnabled) {
+    if ((findProperty('expo.gif.enabled') ?: "") == "true") {
         implementation "com.facebook.fresco:animated-gif:+"
     }
     
-    if (webpEnabled) {
+    if ((findProperty('expo.webp.enabled') ?: "") == "true") {
         implementation "com.facebook.fresco:webpsupport:+"
-        if (webpAnimatedEnabled) {
+        if ((findProperty('expo.webp.animated') ?: "") == "true") {
             implementation "com.facebook.fresco:animated-webp:+"
         }
     }
