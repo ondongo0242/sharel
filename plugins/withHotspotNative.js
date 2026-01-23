@@ -59,7 +59,7 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                 connectToWifiAndroid10Plus(ssid, password, ipAddress, port, promise)
             } catch (e: Exception) {
                 mainHandler.post {
-                    promise.reject("WIFI_ERROR", "Failed to connect: \${e.message}")
+                    promise.reject("WIFI_ERROR", "Failed to connect: \\${e.message}")
                 }
             }
         }.start()
@@ -128,7 +128,7 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                                 putString("ssid", ssid)
                                 putString("ipAddress", ipAddress)
                                 putInt("port", port)
-                                putString("warning", "Connected but ping failed: \${e.message}")
+                                putString("warning", "Connected but ping failed: \\${e.message}")
                             }
                             promise.resolve(result)
                         }
@@ -171,7 +171,7 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             connectedNetwork = null
             promise.resolve(true)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to disconnect: \${e.message}")
+            promise.reject("ERROR", "Failed to disconnect: \\${e.message}")
         }
     }
     
@@ -188,9 +188,9 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
         try {
             startHotspotInternal(wifiManager, promise)
         } catch (e: SecurityException) {
-            promise.reject("PERMISSION_ERROR", "Location permission required: \${e.message}")
+            promise.reject("PERMISSION_ERROR", "Location permission required: \\${e.message}")
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to start hotspot: \${e.message}")
+            promise.reject("ERROR", "Failed to start hotspot: \\${e.message}")
         }
     }
     
@@ -251,7 +251,7 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             hotspotReservation = null
             promise.resolve(true)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to stop hotspot: \${e.message}")
+            promise.reject("ERROR", "Failed to stop hotspot: \\${e.message}")
         }
     }
     
@@ -424,12 +424,12 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                         while (addresses.hasMoreElements()) {
                             val addr = addresses.nextElement()
                             if (!addr.isLoopbackAddress && addr is java.net.Inet4Address) {
-                                android.util.Log.d("SharelHttpServer", "Interface: \${ni.name}, IP: \${addr.hostAddress}")
+                                android.util.Log.d("SharelHttpServer", "Interface: \\${ni.name}, IP: \\${addr.hostAddress}")
                             }
                         }
                     }
                 } catch (e: Exception) {
-                    android.util.Log.e("SharelHttpServer", "Error listing interfaces: \${e.message}")
+                    android.util.Log.e("SharelHttpServer", "Error listing interfaces: \\${e.message}")
                 }
                 
                 promise.resolve(true)
@@ -437,8 +437,8 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                 promise.reject("SERVER_ERROR", "Server failed to start - not alive after start()")
             }
         } catch (e: Exception) {
-            android.util.Log.e("SharelHttpServer", "Failed to start server: \${e.message}", e)
-            promise.reject("SERVER_ERROR", "Failed to start server: \${e.message}")
+            android.util.Log.e("SharelHttpServer", "Failed to start server: \\${e.message}", e)
+            promise.reject("SERVER_ERROR", "Failed to start server: \\${e.message}")
         }
     }
     
@@ -449,7 +449,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
             server = null
             promise.resolve(true)
         } catch (e: Exception) {
-            promise.reject("SERVER_ERROR", "Failed to stop server: \${e.message}")
+            promise.reject("SERVER_ERROR", "Failed to stop server: \\${e.message}")
         }
     }
     
@@ -578,7 +578,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                 session.parseBody(files)
                 
                 val fileName = session.parameters["filename"]?.firstOrNull() 
-                    ?: "file_\${System.currentTimeMillis()}"
+                    ?: "file_\\${System.currentTimeMillis()}"
                 
                 val tmpFilePath = files["file"]
                 if (tmpFilePath != null) {
@@ -607,7 +607,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                 
                 return newFixedLengthResponse(Response.Status.BAD_REQUEST, "text/plain", "No file provided")
             } catch (e: Exception) {
-                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Upload failed: \${e.message}")
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Upload failed: \\${e.message}")
             }
         }
         
@@ -627,7 +627,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                     file.length()
                 )
             } catch (e: Exception) {
-                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Download failed: \${e.message}")
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Download failed: \\${e.message}")
             }
         }
         
@@ -635,7 +635,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
             val downloadDir = module.getSharelDownloadDirectory()
             val dir = File(downloadDir)
             val files = dir.listFiles()?.map { 
-                """{"name":"\${it.name}","size":\${it.length()}}"""
+                """{"name":"\\${it.name}","size":\\${it.length()}}"""
             }?.joinToString(",") ?: ""
             return newFixedLengthResponse(Response.Status.OK, "application/json", """{"files":[\$files]}""")
         }
@@ -681,7 +681,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                     apkFile.length()
                 )
             } catch (e: Exception) {
-                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Download error: \${e.message}")
+                return newFixedLengthResponse(Response.Status.INTERNAL_ERROR, "text/plain", "Download error: \\${e.message}")
             }
         }
         
@@ -877,7 +877,7 @@ class HttpServerModule(reactContext: ReactApplicationContext) : ReactContextBase
                         
                         <div class="info-box">
                             <h3>Connected Device</h3>
-                            <p>IP Address: \${clientIp}</p>
+                            <p>IP Address: \\${clientIp}</p>
                             <p>Connected via local hotspot</p>
                         </div>
                         
@@ -931,7 +931,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             }
             promise.resolve(hasPermission)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to check permission: \${e.message}")
+            promise.reject("ERROR", "Failed to check permission: \\${e.message}")
         }
     }
     
@@ -957,7 +957,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
         
         try {
             val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-            intent.data = Uri.parse("package:\${reactApplicationContext.packageName}")
+            intent.data = Uri.parse("package:\\${reactApplicationContext.packageName}")
             activity.startActivity(intent)
         } catch (e: Exception) {
             try {
@@ -965,7 +965,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                 activity.startActivity(intent)
             } catch (e2: Exception) {
                 pendingPromise = null
-                promise.reject("ERROR", "Cannot open storage permission settings: \${e2.message}")
+                promise.reject("ERROR", "Cannot open storage permission settings: \\${e2.message}")
             }
         }
     }
@@ -987,7 +987,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
         
         try {
             val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
-            intent.data = Uri.parse("package:\${reactApplicationContext.packageName}")
+            intent.data = Uri.parse("package:\\${reactApplicationContext.packageName}")
             activity.startActivity(intent)
         } catch (e: Exception) {
             try {
@@ -995,7 +995,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                 activity.startActivity(intent)
             } catch (e2: Exception) {
                 pendingPromise = null
-                promise.reject("ERROR", "Cannot open storage settings: \${e2.message}")
+                promise.reject("ERROR", "Cannot open storage settings: \\${e2.message}")
             }
         }
     }
@@ -1042,9 +1042,9 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
                 promise.reject("CREATE_FAILED", "Failed to create Sharel folder at: \$rootPath/Sharel")
             }
         } catch (e: SecurityException) {
-            promise.reject("SECURITY_ERROR", "Permission denied: \${e.message}")
+            promise.reject("SECURITY_ERROR", "Permission denied: \\${e.message}")
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to create folder: \${e.message}")
+            promise.reject("ERROR", "Failed to create folder: \\${e.message}")
         }
     }
     
@@ -1080,7 +1080,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             }
             promise.resolve(result)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to get folder path: \${e.message}")
+            promise.reject("ERROR", "Failed to get folder path: \\${e.message}")
         }
     }
     
@@ -1110,7 +1110,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             
             promise.resolve(result)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to list folder: \${e.message}")
+            promise.reject("ERROR", "Failed to list folder: \\${e.message}")
         }
     }
     
@@ -1149,7 +1149,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             }
             promise.resolve(result)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to save file: \${e.message}")
+            promise.reject("ERROR", "Failed to save file: \\${e.message}")
         }
     }
     
@@ -1176,7 +1176,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             
             promise.resolve(deleted)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to delete: \${e.message}")
+            promise.reject("ERROR", "Failed to delete: \\${e.message}")
         }
     }
     
@@ -1205,7 +1205,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             }
             promise.resolve(result)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to get storage info: \${e.message}")
+            promise.reject("ERROR", "Failed to get storage info: \\${e.message}")
         }
     }
     
@@ -1281,7 +1281,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             }
             sendEvent("onStorageEvent", event)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to initialize app directories: \${e.message}")
+            promise.reject("ERROR", "Failed to initialize app directories: \\${e.message}")
         }
     }
     
@@ -1309,7 +1309,7 @@ class StorageModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             paths.putString("packageName", reactApplicationContext.packageName)
             promise.resolve(paths)
         } catch (e: Exception) {
-            promise.reject("ERROR", "Failed to get app directories: \${e.message}")
+            promise.reject("ERROR", "Failed to get app directories: \\${e.message}")
         }
     }
     
@@ -1394,7 +1394,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
             }
             promise.resolve(result)
         } catch (e: Exception) {
-            promise.reject("INIT_ERROR", "Failed to initialize logger: \${e.message}")
+            promise.reject("INIT_ERROR", "Failed to initialize logger: \\${e.message}")
         }
     }
     
@@ -1411,7 +1411,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
             logger.log(logLevel, tag, message, data)
             promise.resolve(true)
         } catch (e: Exception) {
-            promise.reject("LOG_ERROR", "Failed to write log: \${e.message}")
+            promise.reject("LOG_ERROR", "Failed to write log: \\${e.message}")
         }
     }
     
@@ -1423,7 +1423,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
     @ReactMethod
     fun flush(promise: Promise) {
         try { logger.flush(); promise.resolve(true) }
-        catch (e: Exception) { promise.reject("FLUSH_ERROR", "Failed to flush: \${e.message}") }
+        catch (e: Exception) { promise.reject("FLUSH_ERROR", "Failed to flush: \\${e.message}") }
     }
     
     @ReactMethod
@@ -1442,7 +1442,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
                 result.pushMap(logMap)
             }
             promise.resolve(result)
-        } catch (e: Exception) { promise.reject("READ_ERROR", "Failed to get logs: \${e.message}") }
+        } catch (e: Exception) { promise.reject("READ_ERROR", "Failed to get logs: \\${e.message}") }
     }
     
     @ReactMethod fun getLogFilePath(promise: Promise) { promise.resolve(logger.getLogFilePath()) }
@@ -1493,7 +1493,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
                     initialized = true
                     info(TAG, "=== Sharel Logger Initialized ===")
                     info(TAG, "Log directory: \$logDirectory")
-                    info(TAG, "Android SDK: \${Build.VERSION.SDK_INT}, Device: \${Build.MANUFACTURER} \${Build.MODEL}")
+                    info(TAG, "Android SDK: \\${Build.VERSION.SDK_INT}, Device: \\${Build.MANUFACTURER} \\${Build.MODEL}")
                 } catch (e: Exception) { Log.e(TAG, "Failed to initialize logger", e) }
             }
         }
@@ -1522,8 +1522,8 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
             Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
                 try {
                     val crashTime = dateFormat.format(Date())
-                    val crashReport = "=== FATAL CRASH REPORT ===\\nTimestamp: \$crashTime\\nThread: \${thread.name}\\nException: \${throwable.javaClass.name}\\nMessage: \${throwable.message}\\nStack: \${Log.getStackTraceString(throwable)}\\nDevice: \${Build.MANUFACTURER} \${Build.MODEL}\\n=== END CRASH ===\\n"
-                    error(TAG, "FATAL CRASH: \${throwable.message}")
+                    val crashReport = "=== FATAL CRASH REPORT ===\\nTimestamp: \$crashTime\\nThread: \\${thread.name}\\nException: \\${throwable.javaClass.name}\\nMessage: \\${throwable.message}\\nStack: \\${Log.getStackTraceString(throwable)}\\nDevice: \\${Build.MANUFACTURER} \\${Build.MODEL}\\n=== END CRASH ===\\n"
+                    error(TAG, "FATAL CRASH: \\${throwable.message}")
                     try { File(crashLogPath).appendText(crashReport) } catch (e: Exception) { Log.e(TAG, "Failed to write crash log", e) }
                     flushSync()
                 } catch (e: Exception) { Log.e(TAG, "Error in crash handler", e) }
@@ -1540,9 +1540,9 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
             scheduleWrite()
         }
         
-        private fun formatLogLine(entry: LogEntry): String = "[\${entry.timestamp}] [\${entry.level.name}] [\${entry.tag}] \${entry.message}\${entry.data?.let { " | \$it" } ?: ""}\\n"
+        private fun formatLogLine(entry: LogEntry): String = "[\\${entry.timestamp}] [\\${entry.level.name}] [\\${entry.tag}] \\${entry.message}\\${entry.data?.let { " | \$it" } ?: ""}\\n"
         private fun scheduleWrite() { writeHandler?.post { try { while (writeQueue.isNotEmpty()) { writer?.write(writeQueue.poll() ?: break) }; writer?.flush(); checkAndRotateIfNeeded() } catch (e: Exception) { Log.e(TAG, "Error writing log", e) } } }
-        private fun checkAndRotateIfNeeded() { try { val f = File(logFilePath); if (f.exists() && f.length() > MAX_LOG_FILE_SIZE) { writer?.close(); File("\${logFilePath}.old").delete(); f.renameTo(File("\${logFilePath}.old")); writer = BufferedWriter(FileWriter(logFilePath, true), 8192); Log.i(TAG, "Log rotated") } } catch (e: Exception) { Log.e(TAG, "Rotation failed", e) } }
+        private fun checkAndRotateIfNeeded() { try { val f = File(logFilePath); if (f.exists() && f.length() > MAX_LOG_FILE_SIZE) { writer?.close(); File("\\${logFilePath}.old").delete(); f.renameTo(File("\\${logFilePath}.old")); writer = BufferedWriter(FileWriter(logFilePath, true), 8192); Log.i(TAG, "Log rotated") } } catch (e: Exception) { Log.e(TAG, "Rotation failed", e) } }
         fun debug(tag: String, message: String, data: String? = null) = log(LogLevel.DEBUG, tag, message, data)
         fun info(tag: String, message: String, data: String? = null) = log(LogLevel.INFO, tag, message, data)
         fun warn(tag: String, message: String, data: String? = null) = log(LogLevel.WARN, tag, message, data)
@@ -1557,7 +1557,7 @@ class LogModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMod
         fun isInitialized(): Boolean = initialized
         fun readLogFile(): String = try { File(logFilePath).readText() } catch (e: Exception) { "" }
         fun clear() { recentLogs.clear(); writeQueue.clear(); try { File(logFilePath).writeText(""); info(TAG, "Logs cleared") } catch (e: Exception) { Log.e(TAG, "Failed to clear", e) } }
-        private fun rotateLogIfNeeded() { try { val f = File(logFilePath); if (f.exists() && f.length() > MAX_LOG_FILE_SIZE) { File("\${logFilePath}.old").delete(); f.renameTo(File("\${logFilePath}.old")) } } catch (e: Exception) { Log.e(TAG, "Failed to rotate", e) } }
+        private fun rotateLogIfNeeded() { try { val f = File(logFilePath); if (f.exists() && f.length() > MAX_LOG_FILE_SIZE) { File("\\${logFilePath}.old").delete(); f.renameTo(File("\\${logFilePath}.old")) } } catch (e: Exception) { Log.e(TAG, "Failed to rotate", e) } }
     }
 }
 `;
@@ -1792,7 +1792,7 @@ class WifiDirectModule(reactContext: ReactApplicationContext) : ReactContextBase
                 }
             })
         } catch (e: SecurityException) {
-            promise.reject("PERMISSION_DENIED", "Location permission required: \${e.message}")
+            promise.reject("PERMISSION_DENIED", "Location permission required: \\${e.message}")
         }
     }
     
@@ -1828,7 +1828,7 @@ class WifiDirectModule(reactContext: ReactApplicationContext) : ReactContextBase
                 }
             })
         } catch (e: SecurityException) {
-            promise.reject("PERMISSION_DENIED", "Permission required: \${e.message}")
+            promise.reject("PERMISSION_DENIED", "Permission required: \\${e.message}")
         }
     }
     
@@ -1967,7 +1967,7 @@ class FileExplorerModule(reactContext: ReactApplicationContext) : ReactContextBa
             files.forEach { file ->
                 result.pushMap(Arguments.createMap().apply {
                     putString("name", file.name)
-                    putString("uri", "file://\${file.absolutePath}")
+                    putString("uri", "file://\\${file.absolutePath}")
                     putString("path", file.absolutePath)
                     putBoolean("isDirectory", file.isDirectory)
                     putDouble("size", file.length().toDouble())
@@ -2218,7 +2218,7 @@ class MediaGalleryModule(reactContext: ReactApplicationContext) : ReactContextBa
                 MediaStore.MediaColumns.MIME_TYPE
             )
             
-            val sortOrder = "\${MediaStore.MediaColumns.DATE_ADDED} DESC LIMIT \$limit OFFSET \$offset"
+            val sortOrder = "\\${MediaStore.MediaColumns.DATE_ADDED} DESC LIMIT \$limit OFFSET \$offset"
             val cursor = reactApplicationContext.contentResolver.query(uri, projection, null, null, sortOrder)
             
             val result = Arguments.createArray()
@@ -2289,7 +2289,7 @@ class MediaGalleryModule(reactContext: ReactApplicationContext) : ReactContextBa
             val cursor = reactApplicationContext.contentResolver.query(
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                 projection, null, null,
-                "\${MediaStore.Images.Media.DATE_ADDED} DESC"
+                "\\${MediaStore.Images.Media.DATE_ADDED} DESC"
             )
             
             val albumMap = mutableMapOf<String, Pair<String, String>>()
@@ -2314,7 +2314,7 @@ class MediaGalleryModule(reactContext: ReactApplicationContext) : ReactContextBa
                     putString("id", id)
                     putString("name", pair.first)
                     putInt("count", albumCounts[id] ?: 0)
-                    putString("thumbnailUri", "file://\${pair.second}")
+                    putString("thumbnailUri", "file://\\${pair.second}")
                 })
             }
             
@@ -2336,9 +2336,9 @@ class MediaGalleryModule(reactContext: ReactApplicationContext) : ReactContextBa
                 MediaStore.Images.Media.MIME_TYPE
             )
             
-            val selection = "\${MediaStore.Images.Media.BUCKET_ID} = ?"
+            val selection = "\\${MediaStore.Images.Media.BUCKET_ID} = ?"
             val selectionArgs = arrayOf(albumId)
-            val sortOrder = "\${MediaStore.Images.Media.DATE_ADDED} DESC LIMIT \$limit OFFSET \$offset"
+            val sortOrder = "\\${MediaStore.Images.Media.DATE_ADDED} DESC LIMIT \$limit OFFSET \$offset"
             
             val cursor = reactApplicationContext.contentResolver.query(
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
@@ -2434,7 +2434,7 @@ class ContactsModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
     @ReactMethod
     fun searchContacts(query: String, limit: Int, promise: Promise) {
         try {
-            val selection = "\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} LIKE ?"
+            val selection = "\\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} LIKE ?"
             val selectionArgs = arrayOf("%\$query%")
             val contacts = fetchContactsWithSelection(selection, selectionArgs, limit)
             promise.resolve(contacts)
@@ -2446,7 +2446,7 @@ class ContactsModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
     @ReactMethod
     fun getContactById(contactId: String, promise: Promise) {
         try {
-            val selection = "\${ContactsContract.Contacts._ID} = ?"
+            val selection = "\\${ContactsContract.Contacts._ID} = ?"
             val selectionArgs = arrayOf(contactId)
             val contacts = fetchContactsWithSelection(selection, selectionArgs, 1)
             if (contacts.size() > 0) {
@@ -2477,9 +2477,9 @@ class ContactsModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
         )
         
         val sortOrder = if (limit > 0) {
-            "\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} ASC LIMIT \$limit OFFSET \$offset"
+            "\\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} ASC LIMIT \$limit OFFSET \$offset"
         } else {
-            "\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} ASC"
+            "\\${ContactsContract.Contacts.DISPLAY_NAME_PRIMARY} ASC"
         }
         
         val cursor = contentResolver.query(
@@ -2505,7 +2505,7 @@ class ContactsModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
                             ContactsContract.CommonDataKinds.Phone.NUMBER,
                             ContactsContract.CommonDataKinds.Phone.TYPE
                         ),
-                        "\${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ?",
+                        "\\${ContactsContract.CommonDataKinds.Phone.CONTACT_ID} = ?",
                         arrayOf(id), null
                     )
                     phoneCursor?.use { pc ->
@@ -2526,7 +2526,7 @@ class ContactsModule(reactContext: ReactApplicationContext) : ReactContextBaseJa
                         ContactsContract.CommonDataKinds.Email.ADDRESS,
                         ContactsContract.CommonDataKinds.Email.TYPE
                     ),
-                    "\${ContactsContract.CommonDataKinds.Email.CONTACT_ID} = ?",
+                    "\\${ContactsContract.CommonDataKinds.Email.CONTACT_ID} = ?",
                     arrayOf(id), null
                 )
                 emailCursor?.use { ec ->
@@ -2661,7 +2661,7 @@ class AppsModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMo
     @ReactMethod
     fun getAppIcon(packageName: String, size: Int, promise: Promise) {
         try {
-            val cacheKey = "\${packageName}_\${size}"
+            val cacheKey = "\\${packageName}_\\${size}"
             iconCache[cacheKey]?.let {
                 promise.resolve(it)
                 return
@@ -2714,7 +2714,7 @@ class AppsModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaMo
                     putString("name", file.nameWithoutExtension)
                     putString("filename", file.name)
                     putString("path", file.absolutePath)
-                    putString("uri", "file://\${file.absolutePath}")
+                    putString("uri", "file://\\${file.absolutePath}")
                     putDouble("size", file.length().toDouble())
                     putDouble("lastModified", file.lastModified().toDouble())
                     putString("mimeType", "application/vnd.android.package-archive")
@@ -2847,7 +2847,7 @@ class SharelPackage : ReactPackage {
         try {
             val timestamp = SimpleDateFormat("HH:mm:ss.SSS", Locale.US).format(Date())
             val level = if (success) "INFO" else "WARN"
-            val logLine = "[$timestamp] [$level] [$tag] $operation completed in ${durationMs}ms | success=$success | details=${details ?: "none"}"
+            val logLine = "[$timestamp] [$level] [$tag] $operation completed in \${durationMs}ms | success=$success | details=\${details ?: "none"}"
             File(logFilePath).appendText(logLine + "\n")
             promise.resolve(true)
         } catch (e: Exception) {
@@ -2859,7 +2859,7 @@ class SharelPackage : ReactPackage {
     fun logCrash(tag: String, crashMessage: String, stackTrace: String?, promise: Promise) {
         try {
             val timestamp = SimpleDateFormat("HH:mm:ss.SSS", Locale.US).format(Date())
-            val logLine = "[$timestamp] [ERROR] [$tag] 💥 CRASH: $crashMessage\nStack: ${stackTrace ?: "N/A"}"
+            val logLine = "[$timestamp] [ERROR] [$tag] 💥 CRASH: $crashMessage\nStack: \${stackTrace ?: "N/A"}"
             File(logFilePath).appendText(logLine + "\n")
             promise.resolve(true)
         } catch (e: Exception) {
@@ -3001,7 +3001,7 @@ function withHotspotNative(config) {
         console.log("[withHotspotNative] Found MainApplication.kt, content length:", contents.length);
         console.log("[withHotspotNative] MainApplication.kt first 500 chars:", contents.substring(0, 500));
         
-        const importStatement = `import ${packageName}.SharelPackage`;
+        const importStatement = `import \${packageName}.SharelPackage`;
         let modified = false;
         
         if (!contents.includes("SharelPackage")) {
@@ -3011,7 +3011,7 @@ function withHotspotNative(config) {
             const packageMatch = contents.match(/^package\s+[^\n]+\n/m);
             if (packageMatch) {
               const insertPos = packageMatch.index + packageMatch[0].length;
-              contents = contents.slice(0, insertPos) + `\n${importStatement}\n` + contents.slice(insertPos);
+              contents = contents.slice(0, insertPos) + `\n\${importStatement}\n` + contents.slice(insertPos);
               console.log("[withHotspotNative] Added import statement");
               modified = true;
             }
@@ -3083,7 +3083,7 @@ function withHotspotNative(config) {
           if (onCreateMatch) {
             contents = contents.replace(
               onCreateMatch[0],
-              `${onCreateMatch[0]}\n        LogModule.initializeGlobal(this)`
+              `\${onCreateMatch[0]}\n        LogModule.initializeGlobal(this)`
             );
             fs.writeFileSync(mainApplicationPath, contents);
             console.log("[withHotspotNative] Added LogModule initialization to MainApplication.kt");
@@ -3108,7 +3108,7 @@ function withHotspotNative(config) {
     if (!buildGradle.includes("nanohttpd")) {
       buildGradle = buildGradle.replace(
         /dependencies\s*\{/,
-        `dependencies {\n    ${nanoHttpdDep}`
+        `dependencies {\n    \${nanoHttpdDep}`
       );
       config.modResults.contents = buildGradle;
       console.log("[withHotspotNative] Added nanohttpd dependency to build.gradle");
