@@ -1,4 +1,4 @@
-# SHAREL - Architecture Complete des Parametres
+# THE SHAREL - Architecture Complete des Parametres
 
 ## Vue d'ensemble
 
