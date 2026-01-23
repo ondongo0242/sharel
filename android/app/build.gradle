@@ -144,9 +144,8 @@ android {
     options -= ""
 
     if (options.length > 0) {
-        // Ex: android.packagingOptions.pickFirsts += '**/SCCS/**'
-        options.each {
-            android.packagingOptions[prop] += it
+        options.each { option ->
+            android.packagingOptions[prop] += option
         }
     }
 }
@@ -154,18 +153,22 @@ android {
 dependencies {
     implementation "org.nanohttpd:nanohttpd:2.3.1"
     implementation "com.facebook.react:react-android"
-    def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true"
-    def isWebpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true"
-    def isWebpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true"
-    if (isGifEnabled) {
+    
+    def gifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true"
+    def webpEnabled = (findProperty('expo.webp.enabled') ?: "") == "true"
+    def webpAnimatedEnabled = (findProperty('expo.webp.animated') ?: "") == "true"
+    
+    if (gifEnabled) {
         implementation "com.facebook.fresco:animated-gif:+"
     }
-    if (isWebpEnabled) {
+    
+    if (webpEnabled) {
         implementation "com.facebook.fresco:webpsupport:+"
-        if (isWebpAnimatedEnabled) {
+        if (webpAnimatedEnabled) {
             implementation "com.facebook.fresco:animated-webp:+"
         }
     }
+    
     if (hermesEnabled.toBoolean()) {
         implementation "com.facebook.react:hermes-android"
     } else {
