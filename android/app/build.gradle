@@ -125,6 +125,7 @@ android {
         jniLibs {
             def enableLegacyPackaging = findProperty('expo.useLegacyPackaging') ?: 'false'
             useLegacyPackaging enableLegacyPackaging.toBoolean()
+            pickFirsts += ['**/libc++_shared.so']
         }
     }
     androidResources {
@@ -145,7 +146,13 @@ android {
 
     if (options.length > 0) {
         options.each { option ->
-            android.packagingOptions[prop] += option
+            if (prop == "pickFirsts") {
+                android.packagingOptions.jniLibs.pickFirsts += option
+            } else if (prop == "excludes") {
+                android.packagingOptions.jniLibs.excludes += option
+            } else {
+                android.packagingOptions[prop] += option
+            }
         }
     }
 }

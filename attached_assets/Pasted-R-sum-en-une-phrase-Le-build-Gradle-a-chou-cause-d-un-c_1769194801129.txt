@@ -1,0 +1,61 @@
+Résumé (en une phrase)
+- Le build Gradle a échoué à cause d’un conflit de bibliothèques natives : plusieurs dépendances fournissent libc++_shared.so et le packaging Android ne sait pas laquelle garder.
+
+Détails diagnostiques tirés du log
+- Message principal : "BUILD FAILED" suivi de la ligne liée à android.packagingOptions.pickFirsts += [**/libc++_shared.so] et sortie du job avec exit code 1.
+- Cela indique un doublon de la librairie native libc++_shared.so lors du packaging des .so (JNI libs).
+
+Solutions possibles (choisissez celle adaptée à votre setup AGP / Gradle)
+
+1) Pour Android Gradle Plugin récent (recommandé : utiliser la nouvelle syntaxe jniLibs)
+- build.gradle (Groovy):
+```groovy
+android {
+  // ...
+  packagingOptions {
+    jniLibs {
+      pickFirsts += ['**/libc++_shared.so']
+    }
+  }
+}
+```
+
+- build.gradle.kts (Kotlin DSL):
+```kotlin
+android {
+  // ...
+  packagingOptions {
+    jniLibs {
+      pickFirsts += listOf("**/libc++_shared.so")
+    }
+  }
+}
+```
+
+2) Pour AGP plus ancien (ancienne syntaxe)
+- build.gradle (Groovy):
+```groovy
+android {
+  // ...
+  packagingOptions {
+    pickFirst '**/libc++_shared.so'
+  }
+}
+```
+
+3) Alternatives (si vous préférez ne pas utiliser pickFirst)
+- Exclure la lib d’une dépendance particulière si vous savez laquelle la fournit :
+  - Ajuster la dépendance native (ou configurer les excludes dans packagingOptions.jniLibs.excludes).
+- Restreindre les ABIs (abiFilters) pour éviter de packager des variantes non voulues.
+
+Conseils pratiques
+- Vérifiez la syntaxe : la chaîne doit être entre guillemets ("**/libc++_shared.so"). L’erreur dans le log montre peut‑être une entrée mal formée (sans guillemets).
+- Exécutez localement : ./gradlew assembleDebug --stacktrace --info pour obtenir la trace complète et localiser précisément le conflit.
+- Nettoyez le cache si vous testez des changements : ./gradlew clean build
+- Si le problème persiste, regardez quelles dépendances incluent libc++_shared.so (inspectez les AARs ou le répertoire build/intermediates/merged_jni_libs).
+
+Si vous voulez, je peux :
+- Proposer exactement la modification à faire dans votre fichier app/build.gradle (donnez-moi le contenu ou le chemin du fichier), ou
+- Chercher quelles dépendances incluent libc++_shared.so dans votre repo et vous indiquer laquelle poserait problème.
+
+Que souhaitez‑vous que je fasse maintenant ?
