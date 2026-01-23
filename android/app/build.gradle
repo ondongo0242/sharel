@@ -152,8 +152,7 @@ android {
 }
 
 dependencies {
-    implementation 'org.nanohttpd:nanohttpd:2.3.1'
-    // The version of react-native is set by the React Native Gradle Plugin
+    implementation "org.nanohttpd:nanohttpd:2.3.1"
     implementation("com.facebook.react:react-android")
 
     def isGifEnabled = (findProperty('expo.gif.enabled') ?: "") == "true"
