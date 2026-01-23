@@ -124,7 +124,7 @@ android {
     packagingOptions {
         jniLibs {
             useLegacyPackaging = (project.findProperty('expo.useLegacyPackaging') ?: 'false').toBoolean()
-            pickFirsts += ['**/libc++_shared.so']
+            pickFirsts.add('**/libc++_shared.so')
         }
     }
     
