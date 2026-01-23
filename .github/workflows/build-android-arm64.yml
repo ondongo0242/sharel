@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          
 
       - name: Setup JDK 17
         uses: actions/setup-java@v4
@@ -37,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Expo prebuild (android)
         run: npx expo prebuild --clean --platform android
@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Android AAB (release)
         working-directory: android
-        run: ./gradlew bundleRelease --no-daemon
+        run: ./gradlew assembleRelease --no-daemon -Porg.gradle.jvmargs="-Xmx2g"
 
       - name: Download bundletool
         run: |
