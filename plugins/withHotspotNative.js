@@ -350,7 +350,21 @@ class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJav
             e.printStackTrace()
         }
         return "192.168.43.1"
+   
+    
+    private fun getHotspotIpAddress(): String {
+        return try {
+            NetworkInterface.getNetworkInterfaces().asSequence().find { 
+                it.name.startsWith("ap") || it.name.startsWith("wlan")
+            }?.inetAddresses?.asSequence()?.find { 
+                it.hostAddress.contains(".")
+            }?.hostAddress ?: "192.168.43.1"
+        } catch (e: Exception) {
+            "192.168.43.1"
+        }
     }
+
+ }
     
     @ReactMethod
     fun addListener(eventName: String) {}
@@ -1914,9 +1928,12 @@ import android.os.Environment
 import android.os.StatFs
 import android.webkit.MimeTypeMap
 import com.facebook.react.bridge.*
+import android.util.LruCache
 import java.io.*
 
 class FileExplorerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+    private val iconCache = LruCache<String, String>(50) // Cache max 50 icons
+
     
     override fun getName(): String = "FileExplorerModule"
     
@@ -2165,8 +2182,13 @@ import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
 import com.facebook.react.bridge.*
+import java.util.concurrent.ConcurrentHashMap
 
 class MediaGalleryModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+    private val mediaCache = ConcurrentHashMap<String, WritableArray>()
+    private val cacheTimestamps = ConcurrentHashMap<String, Long>()
+    private val CACHE_VALIDITY_MS = 5 * 60 * 1000L // 5 minutes
+
     
     override fun getName(): String = "MediaGalleryModule"
     
@@ -2820,6 +2842,31 @@ class SharelPackage : ReactPackage {
             LogModule(reactContext)
         )
     }
+    @ReactMethod
+    fun logPerformance(tag: String, operation: String, durationMs: Long, success: Boolean, details: String?, promise: Promise) {
+        try {
+            val timestamp = SimpleDateFormat("HH:mm:ss.SSS", Locale.US).format(Date())
+            val level = if (success) "INFO" else "WARN"
+            val logLine = "[$timestamp] [$level] [$tag] $operation completed in ${durationMs}ms | success=$success | details=${details ?: "none"}"
+            File(logFilePath).appendText(logLine + "\n")
+            promise.resolve(true)
+        } catch (e: Exception) {
+            promise.reject("LOG_ERROR", e.message)
+        }
+    }
+    
+    @ReactMethod
+    fun logCrash(tag: String, crashMessage: String, stackTrace: String?, promise: Promise) {
+        try {
+            val timestamp = SimpleDateFormat("HH:mm:ss.SSS", Locale.US).format(Date())
+            val logLine = "[$timestamp] [ERROR] [$tag] 💥 CRASH: $crashMessage\nStack: ${stackTrace ?: "N/A"}"
+            File(logFilePath).appendText(logLine + "\n")
+            promise.resolve(true)
+        } catch (e: Exception) {
+            promise.reject("CRASH_LOG_ERROR", e.message)
+        }
+    }
+
     
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
         return emptyList()

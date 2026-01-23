@@ -35,35 +35,30 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-
-
-      - name: Install Expo CLI
-        run: npm install -g expo-cli
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Prebuild Expo (generates android native project)
+      - name: Expo prebuild (android)
         run: npx expo prebuild --clean --platform android
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
         with:
-          api-versions: '33,35'
+          api-versions: '33'
           build-tools-version: '35.0.0'
           ndk-version: '27.1.12297006'
           cmake-version: '3.22.1'
 
-      - name: Build Android AAB (bundleRelease)
+      - name: Build Android AAB (release)
         working-directory: android
-        run: ./gradlew bundleRelease --no-daemon -Porg.gradle.jvmargs="-Xmx2g"
+        run: ./gradlew bundleRelease --no-daemon
 
       - name: Download bundletool
         run: |
           curl -L -o bundletool.jar https://github.com/google/bundletool/releases/download/1.15.6/bundletool-all-1.15.6.jar
 
-      - name: Create device spec for arm64
+      - name: Create arm64 device spec
         run: |
           cat > device-arm64.json <<'JSON'
           {
@@ -73,79 +68,23 @@ jobs:
           }
           JSON
 
-      - name: Build APKS for arm64 from AAB
+      - name: Build APKS (arm64)
         run: |
-          BUNDLE="android/app/build/outputs/bundle/release/app-release.aab"
-          if [ ! -f "$BUNDLE" ]; then
-            echo "ERROR: AAB not found at $BUNDLE"
-            ls -la android/app/build/outputs/ || echo "outputs directory not found"
-            exit 1
-          fi
-          java -jar bundletool.jar build-apks --bundle="$BUNDLE" --output=app-arm64.apks --overwrite --device-spec=device-arm64.json
+          java -jar bundletool.jar build-apks \
+            --bundle=android/app/build/outputs/bundle/release/app-release.aab \
+            --output=app-arm64.apks \
+            --overwrite \
+            --device-spec=device-arm64.json
 
-      - name: Extract APK from APKS
+      - name: Extract APK
         run: |
           unzip -o app-arm64.apks -d apks_out
-          ls -la apks_out
-          APK_FILE=$(find apks_out -name '*.apk' | head -n 1)
-          echo "APK_FILE=$APK_FILE" >> $GITHUB_ENV
-          echo "Found APK: $APK_FILE"
+          APK=$(find apks_out -name "*.apk" | head -n 1)
+          echo "APK_FILE=$APK" >> $GITHUB_ENV
+          cp "$APK" unsigned.apk
 
-      - name: Sign APK (if keystore secrets provided)
-        if: ${{ secrets.ANDROID_KEYSTORE_BASE64 != '' && secrets.ANDROID_KEYSTORE_PASSWORD != '' }}
-        run: |
-          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > release.keystore
-          APK="${{ env.APK_FILE }}"
-          ANDROID_SDK_ROOT="${ANDROID_SDK_ROOT:-$HOME/android-sdk-linux}"
-          ZIPALIGN="$ANDROID_SDK_ROOT/build-tools/35.0.0/zipalign"
-          APKSIGNER="$ANDROID_SDK_ROOT/build-tools/35.0.0/apksigner"
-          
-          if [ ! -f "$ZIPALIGN" ]; then
-            echo "WARNING: zipalign not found, skipping alignment"
-          else
-            $ZIPALIGN -v -p 4 "$APK" aligned.apk || echo "Alignment failed, continuing with unsigned APK"
-            APK="aligned.apk"
-          fi
-          
-          if [ ! -f "$APKSIGNER" ]; then
-            echo "WARNING: apksigner not found, APK will be unsigned"
-            mv "$APK" signed.apk
-          else
-            $APKSIGNER sign \
-              --ks release.keystore \
-              --ks-pass "pass:${{ secrets.ANDROID_KEYSTORE_PASSWORD }}" \
-              --ks-key-alias "${{ secrets.ANDROID_KEY_ALIAS }}" \
-              --key-pass "pass:${{ secrets.ANDROID_KEY_PASSWORD }}" \
-              --out signed.apk "$APK"
-          fi
-
-      - name: Rename unsigned APK if no keystore provided
-        if: ${{ secrets.ANDROID_KEYSTORE_BASE64 == '' || secrets.ANDROID_KEYSTORE_PASSWORD == '' }}
-        run: |
-          APK="${{ env.APK_FILE }}"
-          if [ -f "$APK" ]; then
-            cp "$APK" unsigned.apk
-            echo "APK unsigned (no keystore secrets provided)"
-          fi
-
-      - name: Upload artifact (APK)
+      - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sharel-arm64-apk
-          path: |
-            signed.apk
-            unsigned.apk
-            ${{ env.APK_FILE }}
-          if-no-files-found: warn
-
-      - name: Create Release
-        if: startsWith(github.ref, 'refs/tags/')
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            signed.apk
-            unsigned.apk
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: sharel-arm64-unsigned-apk
+          path: unsigned.apk
