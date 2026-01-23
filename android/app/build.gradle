@@ -164,11 +164,15 @@ dependencies {
     if (options.length > 0) {
         options.each { option ->
             if (prop == "pickFirsts") {
-                android.packagingOptions.jniLibs.pickFirsts += option
+                android.packagingOptions.jniLibs.pickFirsts.add(option)
             } else if (prop == "excludes") {
-                android.packagingOptions.jniLibs.excludes += option
+                android.packagingOptions.jniLibs.excludes.add(option)
+            } else if (prop == "merges") {
+                android.packagingOptions.merges.add(option)
+            } else if (prop == "doNotStrip") {
+                android.packagingOptions.doNotStrip.add(option)
             } else {
-                android.packagingOptions[prop] += option
+                android.packagingOptions[prop].add(option)
             }
         }
     }
