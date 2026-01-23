@@ -18,6 +18,7 @@ import android.net.wifi.WifiNetworkSpecifier
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.annotation.RequiresApi
 import com.facebook.react.bridge.*
 import com.facebook.react.modules.core.DeviceEventManagerModule
@@ -27,6 +28,11 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 class HotspotModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
+    
+    companion object {
+        private const val TAG = "HotspotModule"
+        private const val CONNECTION_TIMEOUT_SECONDS = 15L
+    }
     
     private var hotspotReservation: WifiManager.LocalOnlyHotspotReservation? = null
     private val mainHandler = Handler(Looper.getMainLooper())
