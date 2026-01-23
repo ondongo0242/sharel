@@ -144,7 +144,7 @@ android {
     options -= ""
 
     if (options.length > 0) {
-        println "android.packagingOptions.$prop += $options ($options.length)"
+        println "android.packagingOptions.${prop} += ${options} (${options.length})"
         // Ex: android.packagingOptions.pickFirsts += '**/SCCS/**'
         options.each {
             android.packagingOptions[prop] += it
