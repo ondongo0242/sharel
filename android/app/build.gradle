@@ -160,18 +160,18 @@ dependencies {
     implementation "org.nanohttpd:nanohttpd:2.3.1"
     implementation "com.facebook.react:react-android"
     
-    if ((findProperty('expo.gif.enabled') ?: "") == "true") {
+    if (findProperty('expo.gif.enabled') == "true") {
         implementation "com.facebook.fresco:animated-gif:+"
     }
     
-    if ((findProperty('expo.webp.enabled') ?: "") == "true") {
+    if (findProperty('expo.webp.enabled') == "true") {
         implementation "com.facebook.fresco:webpsupport:+"
-        if ((findProperty('expo.webp.animated') ?: "") == "true") {
+        if (findProperty('expo.webp.animated') == "true") {
             implementation "com.facebook.fresco:animated-webp:+"
         }
     }
     
-    if (hermesEnabled.toBoolean()) {
+    if (project.hasProperty('hermesEnabled') && project.hermesEnabled.toBoolean()) {
         implementation "com.facebook.react:hermes-android"
     } else {
         implementation jscFlavor
