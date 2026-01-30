@@ -55,7 +55,7 @@ jobs:
 
       - name: Build Android AAB (release)
         working-directory: android
-        run: ./gradlew assembleRelease --no-daemon
+        run: ./gradlew assembleRelease --no-daemon --warning-mode all --info
 
       - name: Download bundletool
         run: |
