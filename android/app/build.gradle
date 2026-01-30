@@ -186,8 +186,6 @@ dependencies {
                 android.packagingOptions.merges.add(option)
             } else if (prop == "doNotStrip") {
                 android.packagingOptions.doNotStrip.add(option)
-            } else {
-                android.packagingOptions[prop].add(option)
             }
         }
     }
